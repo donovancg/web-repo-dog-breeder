@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i");
 /*
 MEDIA QUERY MANAGER
 
@@ -10,6 +11,14 @@ MEDIA QUERY MANAGER
 
 Base > typography > general layout > grid > page layout > components
 */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #222; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }

@@ -1,5 +1,13 @@
 // Colors
 
+$color-primary: #1F3A93;
+$color-primary-light: brighten($color-primary, 15%);
+$color-primary-dark: darken($color-primary, 15%);
+
+$color-secondary: #936D06;
+$color-secondary-light: brighten($color-secondary, 15%);
+$color-secondary-dark: darken($color-secondary, 15%);
+
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
@@ -20,3 +28,5 @@ $gutter-horizontal: 6rem;
 
 // Font 
 $default-font-size: 1.6rem;
+$default-font-family: 'Open Sans';
+$default-font-color: #222;

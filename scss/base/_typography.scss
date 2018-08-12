@@ -1,0 +1,9 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: $default-font-size;
+    font-family: $default-font-family, sans-serif;
+    color: $default-font-color;
+}
