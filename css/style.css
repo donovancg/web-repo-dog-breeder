@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,400,400i|Merriweather:400,400i");
 /*
 MEDIA QUERY MANAGER
 
@@ -16,8 +16,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
-  color: #222; }
+  font-family: "Merriweather", serif;
+  color: #222;
+  line-height: 130%; }
 
 .row {
   max-width: 114rem;
