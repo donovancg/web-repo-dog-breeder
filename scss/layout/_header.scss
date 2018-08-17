@@ -1,0 +1,19 @@
+.header {
+    height: 40vh;
+    background-image: linear-gradient(rgba($color-primary-light, 1), rgba($color-primary-light, 1)), url("../img/hero.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &__logo {
+        height: 7.5rem;
+        margin: 2.5rem;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+    }
+}

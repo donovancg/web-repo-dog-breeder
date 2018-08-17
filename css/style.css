@@ -11,6 +11,13 @@ MEDIA QUERY MANAGER
 
 Base > typography > general layout > grid > page layout > components
 */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
 html {
   font-size: 62.5%; }
 
@@ -19,6 +26,18 @@ body {
   font-family: "Merriweather", serif;
   color: #222;
   line-height: 130%; }
+
+*[class^="heading-"] {
+  font-family: "Lato"; }
+
+.heading-primary {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+  font-size: 5rem; }
 
 .row {
   max-width: 114rem;
@@ -62,3 +81,41 @@ body {
     width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 40vh;
+  background-image: linear-gradient(#2c53d2, #2c53d2), url("../img/hero.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; }
+  .header__logo {
+    height: 7.5rem;
+    margin: 2.5rem; }
+  .header__nav {
+    position: absolute;
+    top: 5rem;
+    right: 5rem; }
+
+.nav__li {
+  list-style: none;
+  display: inline-block; }
+
+.nav__a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato";
+  margin: 3rem;
+  padding: 1rem 0;
+  transition: all .2s;
+  border-bottom: 2px solid transparent; }
+  .nav__a:hover:not(.nav__a--cta) {
+    border-bottom: 2px solid #fff; }
+  .nav__a--cta {
+    border: 2px solid #dda409;
+    color: #dda409;
+    border-radius: 5px;
+    padding: 1rem 2rem; }
+    .nav__a--cta:hover {
+      color: #936D06;
+      border: 2px solid #936D06; }
