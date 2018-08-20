@@ -1,19 +1,76 @@
+// .header {
+//     height: 40vh;
+//     background-image: linear-gradient(rgba($color-primary-light, 1), rgba($color-primary-light, 1)), url("../img/hero.jpg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     position: relative;
+
+//     &__logo {
+//         height: 7.5rem;
+//         margin: 2.5rem;
+//     }
+
+//     &__nav {
+//         position: absolute;
+//         top: 5rem;
+//         right: 5rem;
+//     }
+// }
+
 .header {
-    height: 40vh;
-    background-image: linear-gradient(rgba($color-primary-light, 1), rgba($color-primary-light, 1)), url("../img/hero.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 
+    &__bar {
+        height: 10vh;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 0 2rem;
+        position: relative;
+    }
+
     &__logo {
-        height: 7.5rem;
-        margin: 2.5rem;
+        height: 80%;
+        filter: brightness(1.5);
     }
 
     &__nav {
-        position: absolute;
-        top: 5rem;
-        right: 5rem;
+        margin-left: auto;
+    }
+
+    &__main {
+        background-color: $color-grey-light-2;
+        position: relative;
+    }
+
+    &__img {
+        width: 50%;
+        margin: auto;
+        display: block;
+        // filter: brightness(.5);
+        z-index: 1000;
+
+        &--box {
+            position: absolute;
+            background-color: rgba($color-black, .8);
+            bottom: 0;
+            right: calc(25% + 2rem);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        &--caption {
+            color: white;
+            display: inline-block;
+        }
+
+        &--link {
+            color: #00f;
+            display: inline-block;
+            margin-left: 1rem;
+        }
     }
 }
