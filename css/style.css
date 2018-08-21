@@ -42,6 +42,39 @@ body {
   width: 100%;
   text-align: center; }
 
+.heading-secondary {
+  text-align: center;
+  margin: 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2rem; }
+
+.puppy {
+  background-color: #f7f7f7;
+  text-align: center; }
+
+.footer {
+  background-color: #333;
+  height: 30vh;
+  display: flex; }
+  .footer__title {
+    color: #fff;
+    align-self: center;
+    margin-left: 15vh; }
+  .footer__nav {
+    margin-left: auto;
+    margin-right: 5rem;
+    margin-top: 5rem; }
+  .footer__li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 3rem; }
+  .footer__a {
+    text-decoration: none;
+    color: #fff; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -103,9 +136,10 @@ body {
     margin-left: auto; }
   .header__main {
     background-color: #eee;
-    position: relative; }
+    position: relative;
+    height: 40vh; }
   .header__img {
-    width: 50%;
+    max-height: 100%;
     margin: auto;
     display: block;
     z-index: 1000; }
@@ -124,25 +158,34 @@ body {
       display: inline-block;
       margin-left: 1rem; }
 
-.nav__li {
-  list-style: none;
-  display: inline-block; }
+.nav {
+  z-index: 4000; }
+  .nav__li {
+    list-style: none;
+    display: inline-block;
+    margin: 3rem; }
+  .nav__a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Lato";
+    padding: 1rem 0;
+    transition: all .2s;
+    border-bottom: 2px solid transparent;
+    display: inline-block; }
+    .nav__a:hover:not(.nav__a--cta) {
+      border-bottom: 2px solid #fff; }
+    .nav__a--cta {
+      border: 2px solid #dda409;
+      color: #dda409;
+      border-radius: 5px;
+      padding: 1rem 2rem; }
+      .nav__a--cta:hover {
+        color: #936D06;
+        border: 2px solid #936D06; }
 
-.nav__a {
-  text-decoration: none;
-  color: #fff;
-  font-family: "Lato";
-  margin: 3rem;
-  padding: 1rem 0;
-  transition: all .2s;
-  border-bottom: 2px solid transparent; }
-  .nav__a:hover:not(.nav__a--cta) {
-    border-bottom: 2px solid #fff; }
-  .nav__a--cta {
-    border: 2px solid #dda409;
-    color: #dda409;
-    border-radius: 5px;
-    padding: 1rem 2rem; }
-    .nav__a--cta:hover {
-      color: #936D06;
-      border: 2px solid #936D06; }
+main {
+  min-height: 20vh; }
+
+.section-sale {
+  width: 70%;
+  margin: auto; }

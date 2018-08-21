@@ -1,0 +1,28 @@
+.footer {
+    background-color: $color-grey-dark-3;
+    height: 30vh;
+    display: flex;
+
+    &__title {
+        color: $color-white;
+        align-self: center;
+        margin-left: 15vh;
+    }
+
+    &__nav {
+        margin-left: auto;
+        margin-right: 5rem;
+        margin-top: 5rem;
+    }
+
+    &__li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 3rem;
+    }
+
+    &__a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}

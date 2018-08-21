@@ -9,10 +9,13 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/grid";
+@import "components/puppy";
+
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/nav";
-@import "layout/sale";
 
 @import "pages/home";
 
