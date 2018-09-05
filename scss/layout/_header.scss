@@ -1,57 +1,113 @@
 .header {
+    top: 0;
+    height: calc(20vh + 1.6rem + 2rem + 2rem);
+    // height: 20rem;
     position: relative;
+    background-image: linear-gradient($color-white, $color-grey-light-1);
+    
+    &__img {
+        height: 12vh;
+        display: inline-block;
+        margin: 0 4rem;
+        margin-top: 4vh;
 
-    &__bar {
-        height: 10vh;
-        background-color: $color-primary;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        padding: 0 2rem;
-        position: relative;
+        &--sticky {
+            height: 5rem;
+            display: none;
+            position: absolute;
+            left: 2rem;
+        }
+
+        @include respond(tab-port) {
+            height: 8vh;
+            margin-right: 4rem;
+            margin-left: 2rem;
+            margin-top: 6vh;
+            margin: 6vh 3rem 0 2rem;
+        }
     }
 
-    &__logo {
-        height: 80%;
-        filter: brightness(1.5);
+    &__img--hero {
+        height: 20vh;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     &__nav {
-        margin-left: auto;
+        // background-color: $color-header;
+        background-image: linear-gradient(to right, $color-white 0%, $color-primary 60%, $color-primary 100%);
+        // background-image: linear-gradient(to right, $color-white 0%, $color-primary 30%, $color-primary 100%);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: right;
+        padding: 1rem 0;
+
+        @include respond(tab-port) {
+            background-image: linear-gradient(to right, $color-white 0%, $color-primary 40%, $color-primary 100%);
+        }
     }
 
-    &__main {
-        background-color: $color-grey-light-2;
-        position: relative;
-        height: 40vh;
-    }
+    &__heading {
+        display: inline-block;
+        top: calc(10vh - 1.5rem);
+        position: absolute;
+        width: calc(100vw - 20vh - 5rem - 40vh);
 
-    &__img {
-        max-height: 100%;
-        margin: auto;
-        display: block;
-        // filter: brightness(.5);
-        z-index: 1000;
+        @include respond(tab-port) {
+            width: initial;
+        }
 
-        &--box {
+        @include respond(phone) {
+            text-align: center;
+            width: 100%;
+        }
+
+        &--desc {
             position: absolute;
-            background-color: rgba($color-black, .8);
-            bottom: 0;
-            right: calc(25% + 2rem);
-            padding: 2rem;
-            margin-bottom: 2rem;
+            right: 0;
+            top: .6rem;
+
+            @include respond(tab-port) {
+                position: relative;
+                right: initial;
+                top: initial;
+                font-size: 1.4rem;
+                margin-top: .3rem;
+                letter-spacing: 2px;
+                // text-transform: uppercase;
+            }
         }
 
-        &--caption {
-            color: white;
-            display: inline-block;
-        }
-
-        &--link {
-            color: #00f;
-            display: inline-block;
-            margin-left: 1rem;
+        @include respond(tab-port) {
+            width: auto;
         }
     }
+
+    // &.sticky {
+    //     position: fixed;
+    //     width: 100%;
+    //     z-index: 9000;
+    //     height: 6.5rem;
+
+    //     & .header__nav {
+    //         background-image: none;
+    //         background-color: $color-primary;
+    //         text-align: center;
+    //     }
+
+    //     & .header__heading {
+    //         display: none;
+    //     }
+
+    //     & .header__img {
+    //         position: absolute;
+    //         display: none;
+
+    //         &--sticky {
+    //             display: inline-block;
+    //         }
+    //     }
+    // }
 }

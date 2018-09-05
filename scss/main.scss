@@ -9,14 +9,19 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/form";
 @import "components/grid";
+@import "components/img-grid";
+@import "components/popup";
 @import "components/puppy";
+@import "components/slide";
 
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 @import "layout/nav";
 
+@import "pages/about";
 @import "pages/home";
 
 

@@ -1,0 +1,28 @@
+.slide {
+    width: 50%;
+    margin: 4rem auto 0 auto;
+    position: relative;
+
+    @include respond(tab-land) {
+        width: 70%;
+    }
+
+    &__img  {
+        width: 100%;
+        
+        &--primary {
+            z-index: 4000;
+            position: relative;
+            // animation-name: fadeOutIn;
+            // animation-duration: 5s;
+            // animation-iteration-count: infinite;
+        }
+
+        &--secondary {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.section-about {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+
+    & .about {
+        width: 70%;
+        margin: auto;
+
+        &__quote {
+            font-style: italic;
+            
+            &::before {
+                content: "\201C";
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+.section-info {
+    & .info {
+        width: 60%;
+        margin: auto;
+    }
+}

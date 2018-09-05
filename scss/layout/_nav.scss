@@ -1,11 +1,22 @@
 .nav {
-
     z-index: 4000;
+    height: 6.5rem;
+
+    @include respond(phone) {
+        background-image: none;
+        background-color: $color-primary;
+        text-align: center;
+    }
 
     &__li {
         list-style: none;
         display: inline-block;
-        margin: 3rem;
+        margin: 0 3rem;
+
+        @include respond(tab-port) {
+            margin: 0 1rem;
+            font-size: 1.4rem;
+        }
     }
 
     &__a {
@@ -18,7 +29,7 @@
         display: inline-block;
 
         &:hover:not(&--cta) {
-            border-bottom: 2px solid $color-white;
+            // border-bottom: 2px solid $color-black;
         }
 
         &--cta {
@@ -30,6 +41,30 @@
             &:hover {
                 color: $color-secondary;
                 border: 2px solid $color-secondary;
+            }
+        }
+    }
+    
+    &__img--sticky {
+        height: 5rem;
+        display: none;
+        position: absolute;
+        left: 2rem;
+    }
+
+    &.sticky {
+        position: fixed;
+        z-index: 9000;
+        top: 0;
+        bottom: initial;
+        background-image: none;
+        background-color: $color-primary;
+        
+        & .nav__img--sticky {
+            display: block;
+
+            @include respond(phone) {
+                display: none;
             }
         }
     }

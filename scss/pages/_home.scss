@@ -1,8 +1,26 @@
 main {
-    min-height: 20vh;
+    min-height: calc(100vh - (20vh + 1.6rem + 2rem + 2rem) - 30vh);
 }
 
 .section-sale {
     width: 70%;
     margin: auto;
+}
+
+.section-popup {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    position: fixed;
+    z-index: 8000;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s;
+
+    &:target {
+        display: block;
+        opacity: 1;
+    }
 }

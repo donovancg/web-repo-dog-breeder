@@ -1,24 +1,61 @@
 .footer {
     background-color: $color-grey-dark-3;
     height: 30vh;
-    display: flex;
+    position: relative;
 
     &__title {
         color: $color-white;
-        align-self: center;
-        margin-left: 15vh;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 10%;
+
+        @include respond(tab-land) {
+            left: 20%;
+        }
+        
+        @include respond(tab-port) {
+            position: relative;
+            display: block;
+            text-align: center;
+            transform: none;
+            left: initial;
+            top: initial;
+            padding-top: 3rem;
+        }
+
+        &--link {
+            text-decoration: none;
+            color: $color-white;
+
+            @include respond(tab-port) {
+                font-size: 1.7rem;
+            }
+        }
     }
 
     &__nav {
-        margin-left: auto;
+        // margin-left: auto;
         margin-right: 5rem;
         margin-top: 5rem;
+        float: right;
+        font-size: 1.4rem;
+
+        @include respond(tab-port) {
+            float: none;
+            text-align: center;
+            margin: 2rem auto;
+        }
     }
 
     &__li {
         list-style: none;
         display: inline-block;
         margin: 0 3rem;
+
+        @include respond(tab-port) {
+            margin-top: 5rem;
+        }
     }
 
     &__a {
