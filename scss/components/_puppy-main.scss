@@ -1,0 +1,81 @@
+.puppy-main {
+    width: 80%;
+    margin: auto;
+    position: relative;
+
+    &__left {
+        max-width: 60%;
+        display: inline-block;
+    }
+
+    &__right {
+        width: 35%;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        padding: 0 2rem;
+    }
+
+    &__about {
+        font-size: 1.4rem;
+        font-style: italic;
+    }
+
+    &__price {
+        color: $color-primary-dark;
+        font-size: 1.7rem;
+    }
+
+    &__cta {
+        text-decoration: none;
+        color: $color-white;
+        padding: 1rem 2rem;
+        background-color: $color-secondary;
+        display: inline-block;
+        margin: 1rem 0;
+        transition: all .2s;
+        user-select: none;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+            padding-top: .8rem;
+            padding-bottom: 1.2rem;
+        }
+    }
+
+    &__img {
+        max-width: calc(100% - 5.75rem);
+        margin-left: 5.75rem;
+        max-height: 50vh;
+        margin-right: 5.75rem;
+
+        &--select {
+            // display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: .5rem;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: -.5rem;
+        }
+    }
+
+    &__select {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        display: block;
+        margin: .5rem;
+        margin-left: .25rem;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid #00f;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

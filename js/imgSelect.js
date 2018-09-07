@@ -1,5 +1,5 @@
-var img = document.getElementById('js--select-img');
-var selectImg = document.querySelectorAll(".popup__selector--img");
+var img = document.getElementById('js--puppy-img');
+var selectImg = document.querySelectorAll(".puppy-main__select");
 var imgArr = [];
 var i;
 for(i = 0; i < selectImg.length; i++) {

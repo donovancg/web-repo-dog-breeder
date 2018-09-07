@@ -3,6 +3,23 @@
 </urlset>
 
 <url>
-    <loc>http://localhost/dog-breeder/web-repo-dog-breeder/</loc>
+    <loc>https://www.savannahmaypuppies.com/dog-breeder/web-repo-dog-breeder/index.html</loc>
     <priority>1</priority>
 </url>
+<url>
+    <loc>https://www.savannahmaypuppies.com/dog-breeder/web-repo-dog-breeder/about/index.html</loc>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://www.savannahmaypuppies.com/dog-breeder/web-repo-dog-breeder/contact/index.html</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://www.savannahmaypuppies.com/dog-breeder/web-repo-dog-breeder/puppies/index.html</loc>
+    <priority>1</priority>
+</url>
+<url>
+    <loc>https://www.savannahmaypuppies.com/dog-breeder/web-repo-dog-breeder/shipping/index.html</loc>
+    <priority>0.2</priority>
+</url>
+

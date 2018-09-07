@@ -10,6 +10,13 @@
     overflow-x: auto;
     padding-bottom: 2rem;
 
+    @include respond(phone) {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        max-height: 100%;
+    }
+
     &__close {
         position: absolute;
         top: 2rem;
@@ -18,10 +25,18 @@
         cursor: pointer;
         text-decoration: none;
         color: $color-black;
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
     }
 
     &__flex {
         display: flex;
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     &__select {

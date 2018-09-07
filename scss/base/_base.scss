@@ -11,3 +11,7 @@
     margin: 3rem auto;
     border-bottom: 1px solid $color-grey-light-3;
 }
+
+img {
+    user-select: none;
+}

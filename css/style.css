@@ -29,6 +29,9 @@ Base > typography > general layout > grid > page layout > components
   margin: 3rem auto;
   border-bottom: 1px solid #bbb; }
 
+img {
+  user-select: none; }
+
 html {
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
@@ -60,7 +63,8 @@ body {
 
 .heading-secondary {
   text-align: center;
-  margin: 2rem; }
+  margin: 2rem;
+  font-weight: 400; }
 
 ::selection {
   color: #fff;
@@ -150,6 +154,12 @@ body {
   position: absolute;
   overflow-x: auto;
   padding-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .popup {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      max-height: 100%; } }
   .popup__close {
     position: absolute;
     top: 2rem;
@@ -158,8 +168,14 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: #000; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__close {
+        font-size: 3rem; } }
   .popup__flex {
     display: flex; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__flex {
+        flex-direction: column; } }
   .popup__select {
     margin: 2rem; }
   .popup__left {
@@ -225,6 +241,64 @@ body {
   .puppy__sold {
     position: absolute;
     height: 30rem; }
+
+.puppy-main {
+  width: 80%;
+  margin: auto;
+  position: relative; }
+  .puppy-main__left {
+    max-width: 60%;
+    display: inline-block; }
+  .puppy-main__right {
+    width: 35%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    padding: 0 2rem; }
+  .puppy-main__about {
+    font-size: 1.4rem;
+    font-style: italic; }
+  .puppy-main__price {
+    color: #004d4d;
+    font-size: 1.7rem; }
+  .puppy-main__cta {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    background-color: #FFB12E;
+    display: inline-block;
+    margin: 1rem 0;
+    transition: all .2s;
+    user-select: none; }
+    .puppy-main__cta:hover {
+      background-color: #e18d00;
+      padding-top: .8rem;
+      padding-bottom: 1.2rem; }
+  .puppy-main__img {
+    max-width: calc(100% - 5.75rem);
+    margin-left: 5.75rem;
+    max-height: 50vh;
+    margin-right: 5.75rem; }
+    .puppy-main__img--select {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: .5rem;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: -.5rem; }
+  .puppy-main__select {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    display: block;
+    margin: .5rem;
+    margin-left: .25rem;
+    cursor: pointer; }
+    .puppy-main__select:hover {
+      border: 1px solid #00f; }
+    .puppy-main__select:last-of-type {
+      margin-bottom: 0; }
 
 .slide {
   width: 50%;
@@ -357,11 +431,6 @@ body {
         margin-left: 2rem;
         margin-top: 6vh;
         margin: 6vh 3rem 0 2rem; } }
-  .header__img--hero {
-    height: 20vh;
-    position: absolute;
-    top: 0;
-    right: 0; }
   .header__nav {
     background-image: linear-gradient(to right, #fff 0%, #008080 60%, #008080 100%);
     position: absolute;
@@ -376,7 +445,7 @@ body {
     display: inline-block;
     top: calc(10vh - 1.5rem);
     position: absolute;
-    width: calc(100vw - 20vh - 5rem - 40vh); }
+    width: calc(100vw - 20vh - 5rem); }
     @media only screen and (max-width: 56.25em) {
       .header__heading {
         width: initial; } }
@@ -387,7 +456,9 @@ body {
     .header__heading--desc {
       position: absolute;
       right: 0;
-      top: .6rem; }
+      top: .6rem;
+      font-family: "Lato";
+      font-size: 1.7rem; }
       @media only screen and (max-width: 56.25em) {
         .header__heading--desc {
           position: relative;
@@ -395,7 +466,8 @@ body {
           top: initial;
           font-size: 1.4rem;
           margin-top: .3rem;
-          letter-spacing: 2px; } }
+          letter-spacing: 2px;
+          font-family: "Merriweather"; } }
     @media only screen and (max-width: 56.25em) {
       .header__heading {
         width: auto; } }
