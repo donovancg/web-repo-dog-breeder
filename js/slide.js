@@ -1,40 +1,16 @@
-var container = document.getElementById('js--slide-div');
-var img = document.getElementById('js--slide-main');
-var trans = document.getElementById('js--slide-trans');
-var imgStr = "img/slide/slide-";
+var container = document.querySelector('.banner');
 
 var i = 1;
 
 setInterval(function() {
-    function transChange() {
-        var src = trans.src;
-        var arrSrc = src.split("slide-")[1];
-        var i = parseFloat(arrSrc.split(".jpg")[0]);
-        if(i < 6) {
-            i++;
-        } else {
-            i = 1;
-        }
-        trans.src = imgStr + i + ".jpg";
+    if(i < 7) {
+        i++;
+    } else {
+        i = 1;
     }
-    function imgFade() {
-        img.classList.add("u-animate-fadeOut");
-    }
-
-    function imgChange() {
-        setTimeout(function() {
-            img.src = trans.src;
-        }, 1000);
-    }
-
-    function imgSnap() {
-        img.classList.remove("u-animate-fadeOut");
-    }
-
-    transChange();
-    imgFade();
-    imgChange();
-
+    console.log(container.style.backgroundImage);
+    container.style.backgroundImage = "linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 35rem, $color-banner 45rem, $color-banner 100%), url(\"../img/slide/slide_0" + i + ".jpg\");";
+    console.log(i);
 }, 5000);
 
 /*

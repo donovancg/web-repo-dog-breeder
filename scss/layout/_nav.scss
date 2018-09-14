@@ -1,55 +1,62 @@
 .nav {
-    z-index: 4000;
-    height: 6.5rem;
+    overflow: hidden;
+    background-image: linear-gradient(to right, $color-white 0%, $color-primary 50%, $color-primary 100%);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
 
     @include respond(phone) {
         background-image: none;
         background-color: $color-primary;
-        text-align: center;
+        display: block;
     }
 
-    &__li {
-        list-style: none;
-        display: inline-block;
-        margin: 0 3rem;
+    &.responsive {
+        position: relative;
 
-        @include respond(tab-port) {
-            margin: 0 1rem;
-            font-size: 1.4rem;
-        }
-    }
+        & .nav__link {
+            float: none;
+            display: block;
+            text-align: left;
 
-    &__a {
-        text-decoration: none;
-        color: $color-white;
-        font-family: $default-font-family-header;
-        padding: 1rem 0;
-        transition: all .2s;
-        border-bottom: 2px solid transparent;
-        display: inline-block;
-
-        &:hover:not(&--cta) {
-            // border-bottom: 2px solid $color-black;
-        }
-
-        &--cta {
-            border: 2px solid $color-secondary-light;
-            color: $color-secondary-light;
-            border-radius: 5px;
-            padding: 1rem 2rem;
-
-            &:hover {
-                color: $color-secondary;
-                border: 2px solid $color-secondary;
+            &--icon {
+                position: absolute;
+                right: 0;
+                top: 2rem;
             }
         }
     }
-    
-    &__img--sticky {
-        height: 5rem;
-        display: none;
-        position: absolute;
-        left: 2rem;
+
+    &__link {
+        float: left;
+        display: block;
+        padding: 1rem 2rem;
+        margin: 0 2rem;
+        text-decoration: none;
+        color: $color-grey-dark-3;
+        font-family: $default-font-family-header;
+        font-size: 110%;
+
+        &:not(:first-of-type) {
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
+        &--icon {
+            display: none;
+
+            @include respond(phone) {
+                float: right;
+                display: block !important;
+                font-size: 1.8rem;
+            }
+        }
+
+        @include respond(phone) {
+            
+        }
     }
 
     &.sticky {
@@ -59,13 +66,6 @@
         bottom: initial;
         background-image: none;
         background-color: $color-primary;
-        
-        & .nav__img--sticky {
-            display: block;
-
-            @include respond(phone) {
-                display: none;
-            }
-        }
+        width: 100%;
     }
 }

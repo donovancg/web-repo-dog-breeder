@@ -1,29 +1,30 @@
 .puppy-main {
-    width: 80%;
+    width: 70%;
     margin: auto;
-    position: relative;
+    text-align: center;
+    margin-bottom: 5rem;
 
-    &__left {
-        max-width: 60%;
-        display: inline-block;
+    @include respond(phone) {
+        width: 90%;
     }
 
-    &__right {
-        width: 35%;
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        padding: 0 2rem;
+    &__img {
+        height: 40rem;
+
+        @include respond(tab-port) {
+            height: 30rem;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            height: auto;
+        }
     }
 
-    &__about {
-        font-size: 1.4rem;
-        font-style: italic;
-    }
-
-    &__price {
-        color: $color-primary-dark;
-        font-size: 1.7rem;
+    &__select {
+        height: 5rem;
+        cursor: pointer;
+        // margin: .25rem;
     }
 
     &__cta {
@@ -32,50 +33,43 @@
         padding: 1rem 2rem;
         background-color: $color-secondary;
         display: inline-block;
-        margin: 1rem 0;
+        margin: 1rem;
         transition: all .2s;
-        user-select: none;
+        margin-bottom: 1.5rem;
 
         &:hover {
             background-color: $color-secondary-dark;
-            padding-top: .8rem;
-            padding-bottom: 1.2rem;
         }
     }
 
-    &__img {
-        max-width: calc(100% - 5.75rem);
-        margin-left: 5.75rem;
-        max-height: 50vh;
-        margin-right: 5.75rem;
-
-        &--select {
-            // display: flex;
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: .5rem;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-top: -.5rem;
-        }
+    &__quote {
+        text-align: justify;
+        margin-top: 1rem;
     }
 
-    &__select {
-        width: 5rem;
-        height: 5rem;
-        object-fit: cover;
-        display: block;
-        margin: .5rem;
-        margin-left: .25rem;
-        cursor: pointer;
+    &__table, &__tr, &__td {
+        border-collapse: collapse;
+    }
 
-        &:hover {
-            border: 1px solid #00f;
-        }
+    &__table {
+        margin-top: 2rem;
+    }
 
-        &:last-of-type {
-            margin-bottom: 0;
+    &__td {
+        padding: 1rem 0;
+        text-align: left;
+        font-style: italic;
+        padding-right: 2rem;
+    }
+
+    &__vid {
+        height: 30rem;
+        width: 53rem;
+        margin-top: 2rem;
+
+        @include respond(tab-port) {
+            height: 20rem;
+            width: 35rem;
         }
     }
 }

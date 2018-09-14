@@ -1,92 +1,112 @@
-.header {
-    top: 0;
-    height: calc(20vh + 1.6rem + 2rem + 2rem);
-    // height: 20rem;
-    position: relative;
-    background-image: linear-gradient($color-white, $color-grey-light-1);
+// .header {
+//     top: 0;
+//     height: calc(20vh + 1.6rem + 2rem + 2rem);
+//     // height: calc(15vh + 1.6rem + 2rem + 2rem);
+//     // height: 20rem;
+//     position: relative;
+//     background-image: linear-gradient($color-white, $color-grey-light-1);
+
+//     @include respond(phone) {
+//         height: calc(25vh + 1.6rem + 2rem + 2rem);
+//     }
+
+//     &__bar {
+//         display: flex;
+//         align-items: center;
+//         height: 20vh;
+
+//         @include respond(phone) {
+//             height: calc(25vh);
+//         }
+//     }
     
-    &__img {
-        height: 12vh;
-        display: inline-block;
-        margin: 0 4rem;
-        margin-top: 4vh;
+//     &__img {
+//         height: 12vh;
+//         display: inline-block;
+//         margin: 0 4rem;
+//         // margin-top: 4vh;
+        
+//         @include respond(tab-port) {
+//             height: 8vh;
+//             margin: 0 3rem;
+//         }
 
-        &--sticky {
-            height: 5rem;
-            display: none;
-            position: absolute;
-            left: 2rem;
-        }
+//         @include respond(phone) {
+//             height: 8vh;
+//             margin: 0 1rem;
+//         }
 
-        @include respond(tab-port) {
-            height: 8vh;
-            margin-right: 4rem;
-            margin-left: 2rem;
-            margin-top: 6vh;
-            margin: 6vh 3rem 0 2rem;
-        }
-    }
+//         &--sticky {
+//             height: 5rem;
+//             display: none;
+//             position: absolute;
+//             left: 2rem;
+//         }
+//     }
 
-    // &__img--hero {
-    //     height: 20vh;
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    // }
+//     // &__img--hero {
+//     //     height: 20vh;
+//     //     position: absolute;
+//     //     top: 0;
+//     //     right: 0;
+//     // }
 
-    &__nav {
-        // background-color: $color-header;
-        background-image: linear-gradient(to right, $color-white 0%, $color-primary 60%, $color-primary 100%);
-        // background-image: linear-gradient(to right, $color-white 0%, $color-primary 30%, $color-primary 100%);
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: right;
-        padding: 1rem 0;
+//     &__nav {
+//         // background-color: $color-header;
+//         background-image: linear-gradient(to right, $color-white 0%, $color-primary 60%, $color-primary 100%);
+//         // background-image: linear-gradient(to right, $color-white 0%, $color-primary 30%, $color-primary 100%);
+//         position: absolute;
+//         bottom: 0;
+//         width: 100%;
+//         text-align: right;
+//         padding: 1rem 0;
 
-        @include respond(tab-port) {
-            background-image: linear-gradient(to right, $color-white 0%, $color-primary 40%, $color-primary 100%);
-        }
-    }
+//         @include respond(tab-port) {
+//             background-image: linear-gradient(to right, $color-white 0%, $color-primary 40%, $color-primary 100%);
+//         }
+//     }
 
-    &__heading {
-        display: inline-block;
-        top: calc(10vh - 1.5rem);
-        position: absolute;
-        width: calc(100vw - 20vh - 5rem);
+//     &__heading {
+//         display: inline-flex;
+//         width: 100%;
+//         margin-right: 2rem;
 
-        @include respond(tab-port) {
-            width: initial;
-        }
+//         @include respond(tab-port) {
+//             width: initial;
+//             flex-direction: column;
+//         }
 
-        @include respond(phone) {
-            text-align: center;
-            width: 100%;
-        }
+//         @include respond(phone) {
+//             text-align: center;
+//             width: 100%;
+//             margin-right: 5rem;
+//             top: calc(12.5vh - 1.5rem);
+//         }
 
-        &--desc {
-            position: absolute;
-            right: 0;
-            top: .6rem;
-            font-family: $default-font-family-header;
-            font-size: 1.7rem;
+//         &--desc {
+//             // position: absolute;
+//             // right: 0;
+//             // top: .6rem;
+//             font-family: $default-font-family-header;
+//             font-size: 1.7rem;
+//             margin-left: auto;
 
-            @include respond(tab-port) {
-                position: relative;
-                right: initial;
-                top: initial;
-                font-size: 1.4rem;
-                margin-top: .3rem;
-                letter-spacing: 2px;
-                font-family: $default-font-family-body;
-                // text-transform: uppercase;
-            }
-        }
+//             @include respond(tab-port) {
+//                 position: relative;
+//                 right: initial;
+//                 top: initial;
+//                 font-size: 1.4rem;
+//                 margin-top: .3rem;
+//                 letter-spacing: 2px;
+//                 font-family: $default-font-family-body;
+//                 // text-transform: uppercase;
+//             }
+//         }
 
-        @include respond(tab-port) {
-            width: auto;
-        }
-    }
+//         @include respond(tab-port) {
+//             width: auto;
+//         }
+//     }
 
     // &.sticky {
     //     position: fixed;
@@ -113,4 +133,51 @@
     //         }
     //     }
     // }
+// }
+
+.header {
+
+    &__bar {
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        margin: 0 2rem;
+        // justify-content: center;
+
+        @include respond(phone) {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include respond(phone-small) {
+            height: 30vh;
+        }
+    }
+
+
+    &__heading {
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            text-align: center;
+        }
+
+        @include respond(phone-small) {
+            letter-spacing: .2rem;
+        }
+    }
+
+    &__img {
+        height: 10rem;
+        margin-right: auto;
+
+        @include respond(phone) {
+            margin-right: 0;
+            height: 8rem;
+        }
+
+        @include respond(phone-small) {
+            padding: 1rem 0;
+        }
+    }
 }

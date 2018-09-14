@@ -27,7 +27,8 @@ body {
 
 .heading-primary {
     font-weight: 300;
-    font-size: 3rem;
+    // font-size: 3rem;
+    font-size: 4rem;
 
     @include respond(tab-port) {
         font-size: 2.5rem;
@@ -41,7 +42,13 @@ body {
     font-weight: 400;
 }
 
+.heading-tertiary {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .2rem;
+}
+
 ::selection {
-    color: $color-white;
+    color: $color-black;
     background-color: $color-primary;
 }

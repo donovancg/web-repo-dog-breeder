@@ -1,7 +1,8 @@
 .footer {
     background-color: $color-grey-dark-3;
-    height: 30vh;
+    min-height: 30vh;
     position: relative;
+    overflow: hidden;
 
     &__title {
         color: $color-white;
@@ -53,6 +54,10 @@
         display: inline-block;
         margin: 0 3rem;
 
+        &--social {
+            margin: 0 2rem;
+        }
+
         @include respond(tab-port) {
             margin-top: 5rem;
         }
@@ -61,5 +66,28 @@
     &__a {
         text-decoration: none;
         color: $color-white;
+
+        &--social {
+            font-size: 3rem;
+            display: inline-block;
+
+            &-facebook {
+                color: $color-facebook;
+            }
+
+            &-instagram {
+                color: $color-instagram;
+            }
+
+            &-googleplus {
+                color: $color-google-plus;
+            }
+
+            &-twitter {
+                color: $color-twitter;
+            }
+
+            
+        }
     }
 }
