@@ -19,7 +19,7 @@
                     <img src="img/dog-confused-404.jpg" alt="Photo by Tadeusz Lakota on Unsplash" class="four-o-four__img">
                 </div>
                 <div class="four-o-four__return">
-                    <a href="index.php" class="four-o-four__link">Return to Home</a>
+                    <a href="./" class="four-o-four__link">Return to Home</a>
                 </div>
             </div>
         </div>

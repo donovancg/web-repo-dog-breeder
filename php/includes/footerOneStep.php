@@ -1,3 +1,4 @@
+<?php include "../php/includes/db.php"; ?>
 <?php include "../php/variables.php"; ?>
 <footer class="footer">
         <div class="footer__title"><a href="/" class="footer__title--link">Savannah May Puppies</a></div>

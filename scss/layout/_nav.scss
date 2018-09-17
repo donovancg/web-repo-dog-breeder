@@ -1,7 +1,7 @@
 .nav {
     overflow: hidden;
     background-image: linear-gradient(to right, $color-white 0%, $color-primary 50%, $color-primary 100%);
-    padding: 2rem 0;
+    padding: 1.2rem 0;
     display: flex;
     justify-content: flex-end;
 
@@ -36,6 +36,10 @@
         color: $color-grey-dark-3;
         font-family: $default-font-family-header;
         font-size: 110%;
+
+        @include respond(tab-port) {
+            margin: 0 1rem;
+        }
 
         &:not(:first-of-type) {
 

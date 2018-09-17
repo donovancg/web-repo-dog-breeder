@@ -1,9 +1,18 @@
 <?php include "../php/json.php"; ?>
+<?php include "../php/includes/db.php"; ?>
+
+<!--  -->
 <?php
-// echo $json['puppies']['puppy-1']['price'];
-for($i = 0; $i < count($json); $i++) {
-    // print_r($json['puppies']);
-    
+$query_puppies = "SELECT * FROM puppies";
+$result_puppies = mysqli_query($connect, $query_puppies);
+
+$query_img = "SELECT * FROM puppyimg";
+$result_img = mysqli_query($connect, $query_img);
+
+$img_array = array();
+
+while($row2 = mysqli_fetch_assoc($result_img)) {
+    array_push($img_array, $row2['img']);
 }
 ?>
 
@@ -28,24 +37,33 @@ for($i = 0; $i < count($json); $i++) {
             <div class="grid-container">
 
                 <?php
-                for($i = 0; $i < count($json['puppies']); $i++) {
-                    ?>
-
+                
+                while($row = mysqli_fetch_assoc($result_puppies)) {
+                    $name = $row['name'];
+                    $id = $row['id'];
+                    $price = $row['price'];
+                    $description = $row['description'];
+                    $status = $row['status'];
+                    $birthdate = $row['birthdate'];
+                    $gender = $row['gender'];
+                    $breed = $row['breed'];
+                    $images = $row['images'];
+                    $video = $row['video'];
+                ?>
                     <div class="puppy">
-                        <?php if($json['puppies']['puppy-' . ($i)]['status'] == "sold") {
+                        <?php if($status == "sold") {
                             ?>
                             <img src="../img/sold.png" alt="Sold" class="puppy__sold">
                         <?php 
-                        } else if($json['puppies']['puppy-' . ($i)]['status'] == "reserved") {
+                        } else if($status == "reserved") {
                             echo "<img src=\"../img/reserved.png\" alt=\"Reserved\" class=\"puppy__sold\">";
                         }
                         ?>
-                        <img src="../img/puppies/<?php echo $json['puppies']['puppy-' . ($i)]['images'][0] ?>" alt="Puppy" class="puppy__img">
-                        <p class="puppy__name"><?php echo $json['puppies']['puppy-' . ($i)]['name'];?> &ndash; <?php echo $json['puppies']['puppy-' . ($i)]['breed'];?> <?php echo $json['puppies']['puppy-' . ($i)]['gender'];?></p>
-                        <p class="puppy__price"><?php echo $json['puppies']['puppy-' . ($i)]['price'];?></p>
-                        <a href="../single?id=<?php echo $json['puppies']['puppy-' . ($i)]['id'];?>" class="puppy__cta">View Details</a>
+                        <img src="../img/puppies/<?php echo $images; ?>" alt="Puppy" class="puppy__img">
+                        <p class="puppy__name"><?php echo $name;?> &ndash; <?php echo $breed;?> <?php echo $gender;?></p>
+                        <p class="puppy__price"><?php echo $price;?></p>
+                        <a href="../single?id=<?php echo $id;?>" class="puppy__cta">View Details</a>
                     </div>
-
                 <?php } ?>
             </div>
         </section>

@@ -86,8 +86,8 @@ body {
   background-image: linear-gradient(to right, #502d2d 0%, transparent 5%, transparent 32rem, #502d2d 37rem, #502d2d 100%), url("../img/slide/slide_01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
-  padding-left: 37rem;
-  padding-top: .1rem; }
+  padding-top: .1rem;
+  z-index: 3000; }
   @media only screen and (max-width: 37.5em) {
     .banner {
       height: 10rem;
@@ -149,6 +149,12 @@ body {
   width: 50%;
   margin: auto;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .form {
+      width: 70%; } }
+  @media only screen and (max-width: 37.5em) {
+    .form {
+      width: 90%; } }
   .form__group {
     text-align: center;
     margin: 2rem; }
@@ -163,7 +169,11 @@ body {
     font-size: 1.6rem;
     font-family: "Merriweather";
     color: #333;
-    transition: all .2s; }
+    transition: all .2s;
+    border-radius: 0; }
+    @media only screen and (max-width: 25em) {
+      .form__input {
+        width: 100%; } }
     .form__input:focus {
       outline: none;
       border-bottom: 2px solid #ffe2dc; }
@@ -190,7 +200,9 @@ body {
     background-color: #FFB12E;
     color: #fff;
     transition: all .2s;
-    display: inline-block; }
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none; }
     .form__submit--container {
       width: 100%;
       text-align: center; }
@@ -490,6 +502,7 @@ body {
 
 .header__bar {
   height: 20vh;
+  min-height: 20rem;
   display: flex;
   align-items: center;
   margin: 0 2rem; }
@@ -524,7 +537,7 @@ body {
 .nav {
   overflow: hidden;
   background-image: linear-gradient(to right, #fff 0%, #ffe2dc 50%, #ffe2dc 100%);
-  padding: 2rem 0;
+  padding: 1.2rem 0;
   display: flex;
   justify-content: flex-end; }
   @media only screen and (max-width: 37.5em) {
@@ -551,6 +564,9 @@ body {
     color: #333;
     font-family: "Lato";
     font-size: 110%; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__link {
+        margin: 0 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .nav__link:not(:first-of-type) {
         display: none; } }

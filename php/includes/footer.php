@@ -4,7 +4,7 @@
         
         <div class="footer__nav">
             <ul class="footer__ul">
-                <li class="footer__li"><a href="" class="footer__a">Home</a></li>
+                <li class="footer__li"><a href="./" class="footer__a">Home</a></li>
                 <li class="footer__li"><a href="puppies" class="footer__a">Puppies</a></li>
                 <li class="footer__li"><a href="about" class="footer__a">Meet the Family</a></li>
                 <li class="footer__li"><a href="contact" class="footer__a">Contact Us</a></li>
