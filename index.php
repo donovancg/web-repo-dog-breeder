@@ -1,3 +1,4 @@
+<?php include "php/includes/db.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,13 @@
         <section class="section-banner">
             <div class="banner" id="js--banner">
                 <div class="banner__announcement">
-                    <!-- <h2 class="heading-secondary">Announcement heading here</h2>
-                    <h3 class="heading-tertiary">Announcement Subheading here</h3> -->
+                    <?php
+                    $query_content_banner = "SELECT content FROM pagecontent WHERE page = 'home' ";
+                    $result_content_banner = mysqli_query($connect, $query_content_banner);
+                    while($row_content_banner = mysqli_fetch_assoc($result_content_banner)) {
+                        echo $row_content_banner['content'];
+                    }
+                    ?>
                 </div>
                 
             </div>
