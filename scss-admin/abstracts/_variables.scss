@@ -1,0 +1,58 @@
+// Colors
+
+// Primary
+$color-primary: #ffe2dc;
+$color-primary-light: lighten($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 10%);
+
+// Secondary
+$color-secondary: #FFB12E;
+$color-secondary-light: lighten($color-secondary, 15%);
+$color-secondary-dark: darken($color-secondary, 15%);
+
+// Social
+$color-facebook: #3b5998;
+$color-instagram: #517fa4;
+$color-google-plus: #dc4e41;
+$color-twitter: #55acee;
+
+// Shades
+
+// Grey Light
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #bbb;
+
+// Grey Dark
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-grey-dark-4: #444;
+$color-grey-dark-5: #111;
+
+// Black and White
+$color-white: #fff;
+$color-black: #000;
+
+// Element Specific
+$color-banner: #502d2d;
+
+// Blue
+$color-blue-dark-1: #28355C;
+
+
+
+// Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// Font 
+$default-font-size: 1.6rem;
+$default-font-family: 'Lato';
+$default-font-color: #222;
+$default-line-height: 145%;
+
+// RWD
+$root-font-size: 62.5%;

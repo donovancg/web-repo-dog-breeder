@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section-divide {
+    width: 75%;
+    margin: 3rem auto;
+    border-bottom: 1px solid $color-grey-light-3;
+}
+
+img {
+    user-select: none;
+}

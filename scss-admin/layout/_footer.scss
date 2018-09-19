@@ -1,0 +1,93 @@
+.footer {
+    background-color: $color-grey-dark-3;
+    min-height: 30vh;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        color: $color-white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 10%;
+
+        @include respond(tab-land) {
+            left: 20%;
+        }
+        
+        @include respond(tab-port) {
+            position: relative;
+            display: block;
+            text-align: center;
+            transform: none;
+            left: initial;
+            top: initial;
+            padding-top: 3rem;
+        }
+
+        &--link {
+            text-decoration: none;
+            color: $color-white;
+
+            @include respond(tab-port) {
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    &__nav {
+        // margin-left: auto;
+        margin-right: 5rem;
+        margin-top: 5rem;
+        float: right;
+        font-size: 1.4rem;
+
+        @include respond(tab-port) {
+            float: none;
+            text-align: center;
+            margin: 2rem auto;
+        }
+    }
+
+    &__li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 3rem;
+
+        &--social {
+            margin: 0 2rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__a {
+        text-decoration: none;
+        color: $color-white;
+
+        &--social {
+            font-size: 3rem;
+            display: inline-block;
+
+            &-facebook {
+                color: $color-facebook;
+            }
+
+            &-instagram {
+                color: $color-instagram;
+            }
+
+            &-googleplus {
+                color: $color-google-plus;
+            }
+
+            &-twitter {
+                color: $color-twitter;
+            }
+
+            
+        }
+    }
+}
