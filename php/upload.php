@@ -38,6 +38,9 @@ for( $i=0 ; $i < $total ; $i++ ) {
             echo "<a href=\"../admin/puppyimg.php?i=" . $_POST['id'] . "\">Back</a>";
             rename($newFilePath, "../img/puppies/" . $new_name);
         }
+    } else {
+        echo "File name invalid.<br>";
+        echo "<a href=\"../admin/puppyimg.php?i=" . $_POST['id'] . "\">Back</a>";
     }
 }
 

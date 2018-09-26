@@ -53,13 +53,19 @@ if(isset($_GET['i'])) {
     <section class="section-main">
         <section class="section-upload">
             <div class="upload">
-                <h3 class="upload__heading">Update Buddy's Images</h3>
+                <?php
+                
+                while($row_puppies = mysqli_fetch_assoc($result_puppies)) {
+                
+                ?>
+                <h3 class="upload__heading">Update <?php echo $row_puppies['name'] ?>'s Images</h3>
                 <form action="../php/upload.php" method="post" enctype="multipart/form-data">
-                    <input type="text" value="Buddy" name="name" id="name" style="display: none !important; opacity: 0 !important; visibility: hidden !important;">
-                    <input type="text" value="1" name="id" id="id" style="display: none !important; opacity: 0 !important; visibility: hidden !important;">
+                    <input type="text" value="<?php echo $row_puppies['name'] ?>" name="name" id="name" style="display: none !important; opacity: 0 !important; visibility: hidden !important;">
+                    <input type="text" value="<?php echo $row_puppies['id'] ?>" name="id" id="id" style="display: none !important; opacity: 0 !important; visibility: hidden !important;">
                     <input type="file" name="fileToUpload[]" multiple id="fileToUpload" required>
                     <input type="submit" value="Upload Images" name="submit">
                 </form>
+                <?php } ?>
             </div>
         </section>
     </section>
