@@ -12,6 +12,7 @@ body {
 
     // STYLE
     border-right: 1px solid $color-grey-light-1;
+    // border-right: 1px solid $color-primary;
 }
 
 // GRID MAIN AREA
@@ -31,6 +32,8 @@ body {
     // STYLE
     border-right: 2px solid $color-grey-light-1;
     border-bottom: 2px solid $color-grey-light-1;
+    // border-bottom: 1px solid $color-primary;
+    // border-right: 1px solid $color-primary;
     padding: 2rem;
 }
 
@@ -41,6 +44,25 @@ body {
 
     // STYLE
     border-bottom: 2px solid $color-grey-light-1;
+    // border-bottom: 1px solid $color-primary;
     padding: 2rem;
     display: flex;
+}
+
+
+// "MAIN" SUBSECTIONS
+
+// GENERIC
+
+.section-main--el {
+    display: none;
+    position: relative;
+
+    &:target {
+        display: block;
+    }
+}
+
+.section-puppies {
+    height: calc(100% - 1.5rem);
 }

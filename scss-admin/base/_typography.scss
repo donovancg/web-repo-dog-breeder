@@ -39,6 +39,11 @@ body {
 }
 
 ::selection {
-    color: $color-black;
+    color: $color-white;
     background-color: $color-primary;
+}
+
+input, textarea {
+    font-family: $default-font-family;
+    font-size: 1.4rem;
 }

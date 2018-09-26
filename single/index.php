@@ -85,9 +85,9 @@ while($row2 = mysqli_fetch_assoc($result__img)) {
                         </tr>
                         <tr class="puppy-main__tr">
                             <td class="puppy-main__td">Availability: </td>
-                            <td class="puppy-main__td"><?php if($status == "available") {
+                            <td class="puppy-main__td"><?php if($status == "Available") {
                                 echo "Available";
-                            } else if ($status == "reserved"){
+                            } else if ($status == "Reserved"){
                                 echo "Reserved";
                             } else {
                                 echo "Sold";

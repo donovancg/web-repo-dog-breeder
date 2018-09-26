@@ -64,14 +64,282 @@ body {
   letter-spacing: .2rem; }
 
 ::selection {
-  color: #000;
-  background-color: #ffe2dc; }
+  color: #fff;
+  background-color: #e74c3c; }
+
+input, textarea {
+  font-family: "Lato";
+  font-size: 1.4rem; }
 
 .u-animate-fadeOut {
   animation-name: fadeOut;
   animation-duration: .5s;
   animation-iteration-count: 1;
   animation-delay: 6s; }
+
+.add {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-radius: .5rem; }
+  .add__group {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee; }
+  .add__input {
+    padding: 1rem; }
+  .add__label {
+    display: block;
+    margin-bottom: 1rem; }
+  .add__submit {
+    padding: 1rem 4rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    border-radius: 5rem;
+    border: none;
+    color: #fff;
+    margin-top: 1rem; }
+  .add__select {
+    padding: 1rem 2rem; }
+  .add__textarea {
+    padding: 1rem;
+    resize: none;
+    width: 50%;
+    min-height: 10rem;
+    font-family: "Lato"; }
+
+.contact {
+  padding: 2rem;
+  margin: 2rem;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-radius: .5rem; }
+  .contact__table, .contact__tr, .contact__td {
+    border-collapse: collapse; }
+  .contact__td {
+    padding: .5rem; }
+  .contact__header {
+    padding-bottom: 2rem; }
+  .contact__textarea {
+    font-family: "Lato";
+    font-size: 1.6rem;
+    resize: none;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #bbb;
+    min-height: 20rem;
+    overflow: hidden; }
+    .contact__textarea:focus {
+      outline: none; }
+  .contact__input {
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid #e74c3c;
+    background-color: #f7f7f7;
+    transition: all .2s;
+    width: 100%; }
+    .contact__input:focus {
+      outline: none;
+      background-color: #fdfdfd; }
+  .contact__submit {
+    padding: 1rem 4rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    border-radius: 5rem;
+    border: none;
+    color: #fff;
+    margin-top: 1rem;
+    transition: all .2s; }
+    .contact__submit:hover {
+      background-color: #bf2718; }
+  .contact__toolbar {
+    width: 100%;
+    background-color: #fdfdfd;
+    border: 1px solid #eee; }
+  .contact__tool {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #000;
+    transition: all .2s; }
+    .contact__tool:hover {
+      background-color: #f7f7f7; }
+  .contact__text {
+    margin-top: 1rem;
+    border: 1px solid #eee;
+    min-height: 20rem;
+    padding: 2rem; }
+    .contact__text:focus {
+      outline: none; }
+
+.edit-py__edits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.edit-py__container {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: inline-block;
+  max-width: 25%;
+  text-align: center;
+  position: relative;
+  min-width: 35rem; }
+  .edit-py__container--heading {
+    padding: 1rem 4rem;
+    cursor: pointer;
+    background-color: #e74c3c;
+    border-radius: 5rem;
+    border: none;
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none; }
+    .edit-py__container--heading:hover {
+      background-color: #bf2718; }
+
+.edit-py__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.edit-py__content {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 130%; }
+
+.edit-py__textarea {
+  text-align: justify;
+  font-size: 1.3rem;
+  line-height: 130%;
+  font-family: "Lato";
+  height: 20rem;
+  display: block;
+  width: 100%;
+  resize: none;
+  border: none;
+  padding: 1rem; }
+
+.edit-py__submit {
+  padding: 1rem 4rem;
+  cursor: pointer;
+  background-color: #e74c3c;
+  border-radius: 5rem;
+  border: none;
+  color: #fff;
+  margin-top: 1rem; }
+
+.edit-py__span {
+  width: 100%;
+  display: block; }
+
+.edit-py__input {
+  padding: 1rem; }
+
+.edit-py__select {
+  width: 100%;
+  padding: .5rem;
+  border-radius: 2px; }
+
+.edit-py__img {
+  width: 100%;
+  display: block; }
+
+.edit-py__heading {
+  margin-top: 2rem;
+  text-align: center; }
+
+.page {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20rem, 1fr));
+  grid-template-rows: auto; }
+  .page__in {
+    margin: 2rem;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; }
+  .page__form {
+    width: 100%; }
+  .page__heading {
+    margin-bottom: 1rem; }
+  .page__text {
+    width: 100%;
+    height: 20rem;
+    border-style: none;
+    font-family: "Lato";
+    resize: none;
+    padding: 0 1rem;
+    text-align: justify; }
+  .page__submit {
+    padding: 1rem 2rem;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5rem;
+    margin-top: 1rem; }
+
+.puppies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  margin: 2rem; }
+  .puppies__puppy {
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .puppies__content {
+    overflow: hidden;
+    margin: auto; }
+  .puppies__img {
+    width: 95%; }
+  .puppies__group {
+    text-align: center; }
+  .puppies__edit {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: .3rem 4rem;
+    border-radius: 5rem;
+    text-decoration: none;
+    transition: all .2s; }
+    .puppies__edit:hover {
+      background-color: #bf2718; }
+  .puppies__heading {
+    margin: 1rem; }
+  .puppies__add {
+    position: fixed;
+    left: 2rem;
+    bottom: 0;
+    transform: translateY(-100%); }
+  .puppies__cta {
+    padding: 1rem 2rem;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 5rem;
+    text-decoration: none;
+    transition: all .2s; }
+    .puppies__cta:hover {
+      background-color: #bf2718; }
+
+.upload {
+  border: 1px solid #eee;
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem;
+  text-align: center; }
 
 .footer {
   background-color: #333;
@@ -215,7 +483,8 @@ body {
     width: 4rem;
     display: inline-block;
     text-align: center;
-    transition: all .2s; }
+    transition: all .2s;
+    color: #e74c3c; }
   .sidebar__active {
     position: absolute;
     right: 1rem;
@@ -249,3 +518,12 @@ body {
   border-bottom: 2px solid #f7f7f7;
   padding: 2rem;
   display: flex; }
+
+.section-main--el {
+  display: none;
+  position: relative; }
+  .section-main--el:target {
+    display: block; }
+
+.section-puppies {
+  height: calc(100% - 1.5rem); }

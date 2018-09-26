@@ -1,0 +1,70 @@
+.puppies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    margin: 2rem;
+
+    &__puppy {
+        // margin: 2rem;
+        // width: 100%;
+        border: 1px solid $color-grey-light-2;
+        background-color: $color-white;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    &__content {
+        // max-width: 50%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    &__img {
+        width: 95%;
+    }
+
+    &__group {
+        text-align: center;
+    }
+
+    &__edit {
+        background-color: $color-secondary;
+        color: $color-white;
+        padding: .3rem 4rem;
+        border-radius: 5rem;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+        }
+    }
+
+    &__heading {
+        margin: 1rem;
+    }
+
+    &__add {
+        position: fixed;
+        left: 2rem;
+        bottom: 0;
+        transform: translateY(-100%);
+    }
+
+    &__cta {
+        padding: 1rem 2rem;
+        background-color: $color-secondary;
+        color: $color-white;
+        border-radius: 5rem;
+        text-decoration: none;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+        }
+
+    }
+}

@@ -1,0 +1,99 @@
+.edit-py {
+    
+    &__edits {
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    &__container {
+        margin: 2rem;
+        padding: 2rem;
+        background-color: $color-white;
+        border: 1px solid $color-grey-light-2;
+        display: inline-block;
+        max-width: 25%;
+        text-align: center;
+        position: relative;
+        min-width: 35rem;
+
+        &--heading {
+            padding: 1rem 4rem;
+            cursor: pointer;
+            background-color: $color-secondary;
+            border-radius: 5rem;
+            border: none;
+            color: $color-white;
+            margin-top: 1rem;
+            display: inline-block;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $color-secondary-dark;
+            }
+        }
+    }
+
+    &__center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__content {
+        // max-width: 25%;
+        text-align: justify;
+        font-size: 1.3rem;
+        line-height: 130%;
+    }
+
+    &__textarea {
+        text-align: justify;
+        font-size: 1.3rem;
+        line-height: 130%;
+        font-family: $default-font-family;
+        height: 20rem;
+        display: block;
+        width: 100%;
+        resize: none;
+        border: none;
+        padding: 1rem;
+    }
+
+    &__submit {
+        padding: 1rem 4rem;
+        cursor: pointer;
+        background-color: $color-secondary;
+        border-radius: 5rem;
+        border: none;
+        color: $color-white;
+        margin-top: 1rem;
+    }
+
+    &__span {
+        width: 100%;
+        display: block;
+    }
+
+    &__input {
+        padding: 1rem;
+    }
+
+    &__select {
+        width: 100%;
+        padding: .5rem;
+        border-radius: 2px;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__heading {
+        margin-top: 2rem;
+        text-align: center;
+    }
+}

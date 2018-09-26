@@ -1,12 +1,13 @@
 // Colors
 
 // Primary
-$color-primary: #ffe2dc;
+$color-primary: #e74c3c;
 $color-primary-light: lighten($color-primary, 10%);
 $color-primary-dark: darken($color-primary, 10%);
 
 // Secondary
-$color-secondary: #FFB12E;
+// $color-secondary: #FFB12E;
+$color-secondary: $color-primary;
 $color-secondary-light: lighten($color-secondary, 15%);
 $color-secondary-dark: darken($color-secondary, 15%);
 
@@ -22,6 +23,7 @@ $color-twitter: #55acee;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 $color-grey-light-3: #bbb;
+$color-grey-light-4: #fdfdfd;
 
 // Grey Dark
 $color-grey-dark: #777;
@@ -39,6 +41,9 @@ $color-banner: #502d2d;
 
 // Blue
 $color-blue-dark-1: #28355C;
+
+// Special Blue
+$color-blue-link: #00f;
 
 
 

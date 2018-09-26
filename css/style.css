@@ -64,11 +64,11 @@ body {
 .heading-secondary {
   text-align: center;
   margin: 2rem;
-  font-weight: 400; }
+  font-weight: 300; }
 
 .heading-tertiary {
   text-align: center;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: .2rem; }
 
 ::selection {
@@ -81,13 +81,16 @@ body {
   animation-iteration-count: 1;
   animation-delay: 6s; }
 
+.u-color-red {
+  color: #f00; }
+
 .banner {
   height: 30rem;
   background-image: linear-gradient(to right, #502d2d 0%, transparent 5%, transparent 32rem, #502d2d 37rem, #502d2d 100%), url("../img/slide/slide_01.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   padding-left: 37rem;
-  padding-top: .1rem;
+  padding-top: 1rem;
   z-index: 3000; }
   @media only screen and (max-width: 37.5em) {
     .banner {
@@ -224,6 +227,11 @@ body {
   @media only screen and (max-width: 37.5em) {
     .grid-container {
       grid-template-columns: repeat(auto-fit, minmax(200px, 600px)); } }
+
+.about__p, .info__p {
+  width: 60%;
+  margin: auto;
+  text-align: center; }
 
 .popup {
   width: 90%;
@@ -591,17 +599,25 @@ body {
   margin-bottom: 5rem;
   margin-top: 2rem; }
   .section-about .about {
-    width: 70%;
-    margin: auto; }
+    margin: auto;
+    text-align: center; }
     .section-about .about__quote {
-      font-style: italic; }
+      font-style: italic;
+      text-align: justify;
+      width: 70%; }
       .section-about .about__quote::before {
         content: "\201C";
         font-size: 4rem; }
+    .section-about .about__info {
+      text-align: justify; }
+    .section-about .about__caption {
+      text-align: center; }
 
 .section-info .info {
-  width: 60%;
   margin: auto; }
+  .section-info .info__p {
+    margin: 2rem auto;
+    text-align: justify; }
 
 main {
   min-height: calc(100vh - (20vh + 1.6rem + 2rem + 2rem) - 30vh); }
@@ -624,3 +640,6 @@ main {
   .section-popup:target {
     display: block;
     opacity: 1; }
+
+.section-info-home {
+  margin-bottom: 2rem; }

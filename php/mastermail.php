@@ -7,7 +7,7 @@ if(isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $content = $_POST['content'];
-    echo "Email from " . $name . " @ " . $email . ". The message reads: \n" . $content;
+
     if($result) {
         $s = 1;
     } else {
@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
     // $content = wordwrap($content,70);
 
     // send email
-    // mail("donovancgillies@gmail.com", $name . " has sent you an email from Savannah May Puppies", $content, "From: donovancgillies@gmail.com");
+    mail("donovancgillies@gmail.com", "Email from Abigail Chill via Savannah May Puppies", $content);
     header("Location: ../contact/?s=1");
 }
 

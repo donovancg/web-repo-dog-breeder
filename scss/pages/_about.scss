@@ -3,23 +3,39 @@
     margin-top: 2rem;
 
     & .about {
-        width: 70%;
+        // width: 70%;
         margin: auto;
+        text-align: center;
+        
 
         &__quote {
             font-style: italic;
-            
+            text-align: justify;
+            width: 70%;
+
             &::before {
                 content: "\201C";
                 font-size: 4rem;
             }
+        }
+
+        &__info {
+            text-align: justify;
+        }
+
+        &__caption {
+            text-align: center;
         }
     }
 }
 
 .section-info {
     & .info {
-        width: 60%;
         margin: auto;
+
+        &__p {
+            margin: 2rem auto;
+            text-align: justify;
+        }
     }
 }
