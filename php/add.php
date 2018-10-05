@@ -10,14 +10,12 @@ if(isset($_POST['submit'])) {
     $breed = mysqli_real_escape_string($connect, $_POST['breed']);
     $video = mysqli_real_escape_string($connect, $_POST['video']);
 
-    $query_add = "INSERT INTO puppies (name, price, description, status, birthdate, gender, breed, images, video) VALUES ('$name', '$price', '$description', '$status', '$birthdate', '$gender', '$breed', '../img/puppies/IMG_1065.jpg' '$video')";
+    $query_add = "INSERT INTO puppies (name, price, description, status, birthdate, gender, breed, video) VALUES ('$name', '$price', '$description', '$status', '$birthdate', '$gender', '$breed', '$video')";
     $result_add = mysqli_query($connect, $query_add);
     if(!$result_add) {
-        header("Location: ../admin/#puppies");
+        header("Location: ../admin/?s=1#puppies");
     } else {
-        header("Location: ../admin/#puppies");
+        header("Location: ../admin/?s=-1#puppies");
     }
-} else {
-    
 }
 ?>

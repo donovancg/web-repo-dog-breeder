@@ -1,0 +1,59 @@
+.about {
+
+    &__row {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__col {
+        width: 90%;
+        margin: 0 auto;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-top: 0;
+        }
+    }   
+
+    &__quote {
+        text-align: justify;
+
+        @include respond(tab-port) {
+            text-align: left;
+        }
+    }
+
+    &__info {
+        text-align: justify;
+    }
+
+    &__img {
+        height: 30rem;
+        margin: 2rem auto;
+        display: block;
+
+        @include respond(tab-land) {
+            height: 20rem;
+        }
+
+        @include respond(tab-port) {
+            height: 15rem;
+        }
+
+        @include respond(tab-port) {
+            height: auto;
+            width: 70%;
+        }
+    }
+}

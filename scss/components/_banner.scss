@@ -1,21 +1,23 @@
 .banner {
-    height: 30rem;
-    background-image: linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 32rem, $color-banner 37rem, $color-banner 100%), url("../img/slide/slide_01.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-left: 37rem;
-    padding-top: 1rem;
-    z-index: 3000;
+    // height: 30rem;
+    // // background-image: linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 32rem, $color-banner 37rem, $color-banner 100%), url("../img/slide/slide_01.jpg");
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-color: $color-banner;
+    // padding-left: 37rem;
+    // padding-top: 1rem;
+    // z-index: 3000;
+    // color: $color-black !important;
 
-    @include respond(phone) {
-        height: 10rem;
-        background-image: linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 10rem, $color-banner 13rem, $color-banner 100%), url("../img/slide/slide_01.jpg");
-        padding-left: 15rem;
-    }
+    // @include respond(phone) {
+    //     height: 10rem;
+    //     background-image: linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 10rem, $color-banner 13rem, $color-banner 100%), url("../img/slide/slide_01.jpg");
+    //     padding-left: 15rem;
+    // }
 
     & .heading-secondary {
         margin: .5rem;
-        color: $color-primary-light;
+        // color: $color-primary-light;
 
         @include respond(tab-port) {
             font-size: 1.8rem;
@@ -23,7 +25,13 @@
     }
 
     & .heading-tertiary {
-        color: $color-primary-light;
+        // color: $color-primary-light;
         font-size: 1.6rem;
+    }
+
+    &__img {
+        width: 100%;
+        // height: 100%;
+        // max-height: 30rem;
     }
 }

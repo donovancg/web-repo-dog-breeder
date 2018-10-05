@@ -1,4 +1,10 @@
 <?php include "php/includes/db.php"; ?>
+<?php
+
+$query_puppies_featured = "SELECT * FROM puppies WHERE featured='Yes'";
+$result_puppies_featured = mysqli_query($connect, $query_puppies_featured);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,50 +17,146 @@
     <main>
         <section class="section-banner">
             <div class="banner" id="js--banner">
-                <div class="banner__announcement">
-                    <?php
+                <!-- <div class="banner__announcement">
+                    <?php/*
                     $query_content_banner = "SELECT content FROM pagecontent WHERE page = 'home' ";
                     $result_content_banner = mysqli_query($connect, $query_content_banner);
                     while($row_content_banner = mysqli_fetch_assoc($result_content_banner)) {
                         echo $row_content_banner['content'];
-                    }
+                    }*/
                     ?>
-                    <h2 class="heading-secondary">Welcome to Savannah May’s.</h2>
-                    <h3 class="heading-secondary">The home of some very spoiled babies.</h3>
+                    <h2 class="heading-secondary">Welcome to Savannah May’s</h2>
+                    <h3 class="heading-secondary">The home of some very spoiled babies</h3>
                     
-                </div>
+                </div> -->
+                <img src="img/banner-angle.jpg" alt="Banner image" class="banner__img">
                 
             </div>
         </section>
         <section class="section-about-home">
-            <h2 class="heading-secondary about__header">About My Puppies</h2>
-            <div class="about">
-            <p class="about__p">We specialize in Yorkiepoos, which make great, loyal friends and perfect travel companions. The puppies I have for sale are precious!They have beautiful Yorkiepoo coats, tiny faces, and small ears. Just look at all my Yorkiepoo pictures and you will see the quality. My Yorkies and Parti Color Yorkies are calm and love a lap to be on and just to be with you. They are very sweet and snuggly!</p>
+            <h2 class="heading-secondary about-home__header">About My Puppies</h2>
+            <div class="about-home">
+                <div class="about-home__col about-home__col--img">
+                    <img src="img/puppies/IMG_0800 2.jpg" alt="Puppy 1" class="about-home__img">
+                </div>
+                <div class="about-home__col about-home__col--content">
+                    <p class="about-home__p">We specialize in Yorkiepoos, which make great, loyal friends and perfect travel companions. The puppies I have for sale are precious! They have beautiful Yorkiepoo coats, tiny faces, and small ears. Just look at all my Yorkiepoo pictures and you will see the quality. My Yorkiepoos and Parti Color Yorkiepoos are calm and love a lap to be on and just to be with you. They are very sweet and snuggly!</p>
+                    <div class="about-home__cta">
+                        <a href="puppies" class="about-home__link">Show Me!</a>
+                    </div>
+                </div>
             </div>
         </section>
         
         <div class="section-divide"></div>
 
-        <section class="section-info-home">
-            <h2 class="heading-secondary info__header">Information</h2>
-            <div class="info">
-                <h3 class="heading-tertiary info__head">Payment</h3>
-                <p class="info__p">We accept all major credit cards. The prices do not include any delivery arrangements, tax, and credit card fees. ALL MY YORKIEPOO PUPPIES ARE SOLD AS PETS ONLY.</p>
-
-                <br>
-
-                <h3 class="heading-tertiary info__head">Waiting list</h3>
-
-                <p class="info__p">Our waiting list is designed for those who are serious about making our puppies an addition to their family. If the puppy you want is not among the current litter, your choice is preserved on the waiting list.</p>
-                <p class="info__p">For more information, please look at my <a href="shipping/">Information</a> page.</p>
+        <section class="section-info-home-home">
+            <h2 class="heading-secondary info-home__header">Information</h2>
+            <div class="info-home">
+                <div class="info-home__row">
+                    <div class="info-home__col">
+                        <i class="info-home__icon fas fa-shopping-cart"></i>
+                        <h3 class="heading-tertiary info-home__head">Payment</h3>
+                        <p class="info-home__p">We accept all major credit cards. The prices do not include any delivery arrangements,tax, and credit card fees.</p>
+                    </div>
+                    <div class="info-home__col">
+                        <i class="info-home__icon fas fa-ellipsis-h"></i>
+                        <h3 class="heading-tertiary info-home__head">Waiting list</h3>
+                        <p class="info-home__p">Our waiting list is designed for those who are serious about making our puppies an addition to their family. If the puppy you want is not among the current litter, your choice is preserved on the waiting list.</p>
+                    </div>
+                </div>
                 
-                <br>
 
-                <p class="info__p">**Important**<br>Understand that these puppies are our babies. We want every puppy to find a home that is a perfect match for them and their new family. On selection day, if you are not able to select the puppy that you connect with, you can move up on the list for the next litter, or we will gladly refund your deposit. It’s your choice. We don't want anyone feeling as if they have to settle for a puppy simply because they have a deposit invested. All our puppies are adorable, precious, and very intelligent. They turn heads everywhere they go! If you don't feel it’s a perfect match for you, then it most likely isn't for the pup. After a puppy is selected, the deposit is forfeited if the purchase is not completed. We typically select puppies when they are about five weeks old.</p>
+                <p class="info-home__p">For more information, please look at my <a href="shipping/">Information</a> page.</p>
+                
+                <div class="info-home__gallery">
+                    <div class="info-home__gallery--col">
+                        <img src="img/puppies/IMG_1215.jpg" alt="Puppy 2" class="info-home__img">
+                    </div>
+                    <div class="info-home__gallery--col">
+                        <img src="img/puppies/IMG_3008.jpg" alt="Puppy 3" class="info-home__img">
+                    </div>
+                    <div class="info-home__gallery--col">
+                        <img src="img/puppies/IMG_3223.jpg" alt="Puppy 4" class="info-home__img">
+                    </div>
+                </div>
+                
+                
+                <div class="section-divide"></div>
+                
+                <div class="info-home__narrow">
+                    <div class="">
+                        <img src="img/puppies/IMG_3426.jpg" alt="Puppy 5" class="info-home__img info-home__img--middle">
+                    </div>
+                    <div class="">
+                        <h3 class="heading-tertiary">Important!</h3>
+                        <p class="info-home__p info-home__p--justify">Understand that these puppies are our babies. We want every puppy to find a home that is a perfect match for them and their new family. On selection day, if you are not able to select the puppy that you connect with, you can move up on the list for the next litter, or we will gladly refund your deposit. It’s your choice. We don't want anyone feeling as if they have to settle for a puppy simply because they have a deposit invested. All our puppies are adorable, precious, and very intelligent. They turn heads everywhere they go! If you don't feel it’s a perfect match for you, then it most likely isn't for the pup. After a puppy is selected, the deposit is forfeited if the purchase is not completed. We typically select puppies when they are about five weeks old.</p>
 
-                <br>
+                        <br>
+                        <br>
 
-                <p class="info__p">In the unlikely event the home is no longer suitable for the puppy, please contact us. We will gladly assist with rehoming the puppy. Placing one of our puppies in a shelter is never an option; please contact us instead.</p>
+                        <p class="info-home__p info-home__p--justify">In the unlikely event the home is no longer suitable for the puppy, please contact us. We will gladly assist with rehoming the puppy. Placing one of our puppies in a shelter is never an option; please contact us instead.</p>
+
+                        <br>
+                        <br>
+                        
+                        <p class="info-home__p info-home__p--justify">ALL MY YORKIEPOO PUPPIES ARE SOLD AS PETS ONLY.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-divide"></div>
+        <section class="section-featured">
+            <h2 class="heading-secondary">Featured Puppies</h2>
+            <div class="featured">
+                <?php
+                
+                while($row_puppies_featured = mysqli_fetch_assoc($result_puppies_featured)){
+                    $id = $row_puppies_featured['id'];
+                    $query_img = "SELECT img FROM puppyimg WHERE puppy_id='$id'";
+                    $result_img = mysqli_query($connect, $query_img);
+
+                    $img_array = array();
+
+                    while($row_img = mysqli_fetch_assoc($result_img)) {
+                        array_push($img_array, $row_img['img']);
+                    }
+                ?>
+                <div class="featured__puppy">
+                    <h3 class="featured__heading"><?php echo $row_puppies_featured['name']; ?></h3>
+                    <img src="img/puppies/<?php echo $img_array[0]; ?>" alt="<?php echo $row_puppies_featured['name']; ?> - <?php echo $row_puppies_featured['breed']; ?> <?php echo $row_puppies_featured['gender']; ?>" class="featured__img">
+                    <div class="featured__info">
+                        <p class="featured__item"><?php echo $row_puppies_featured['price']; ?></p>
+                        <p class="featured__item"><?php echo $row_puppies_featured['gender']; ?></p>
+                        <p class="featured__item"><?php echo $row_puppies_featured['breed']; ?></p>
+                    </div>
+                    <a href="puppies/" class="featured__link">View Details</a>
+                </div>
+                <?php } ?>
+            </div>
+        </section>
+        <div class="section-divide"></div>
+        <section class="section-contact">
+            <div class="contact-home">
+                <h2 class="heading-secondary">Contact Me</h2>
+                <div class="contact-home__body">
+                    <form action="" method="post" class="contact-home__form">
+                        <div class="contact__group">
+                            <label for="name" class="contact__label">Name: <span class="u-color-red">*</span></label>
+                            <input type="text" name="name" id="name" class="contact-home__input">
+                        </div>
+                        <div class="contact__group">
+                            <label for="email" class="contact__label">Email: <span class="u-color-red">*</span></label>
+                            <input type="email" name="email" id="email" class="contact-home__input">
+                        </div>
+                        <div class="contact__group">
+                            <label for="content" class="contact__label">Comments: <span class="u-color-red">*</span></label>
+                            <textarea name="content" id="contact-home" class="contact-home__textarea"></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="contact-home__submit" name="submit" id="submit">
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -62,47 +164,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- <script src="js/slide.js"></script> -->
-    <!-- <script src="js/sticky.js"></script> -->
+    <script src="js/sticky.js"></script>
     <script src="js/navRespond.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-<!--
-**Important**
-Understand that our puppies are our babies. We want every puppy to find a home that is a perfect match for them and their new family. On selection day, if you are not able to select the puppy that you connect with you can move up on the list for the next litter or we will gladly refund your deposit. Your choice. We don't want anyone feeling as if they have to settle for a puppy simply because they have a deposit invested. Our puppies are all adorable, precious, and very intelligent. They turn heads everywhere they go so if you don't feel its a perfect match for you then it most likely isn't for the pup. After a puppy is selected the deposit is forfeited if purchase is not completed. We typically select puppies around week 5 after birth.
-
-In the unlikely event the home is no longer suitable for the puppy, please contact us. We will help gladly assist with rehoming the puppy. Placing one of our puppies in a shelter is never a option, please contact us instead.
-
-
-We primarily use American Airlines to ship the puppies by air. If we can't make connections using America, we then ship with Delta or Continental Airlines. Delta and Continental are higher in price. The puppies are shipped in an
-airline-approved crate with food and water. They will arrive with their registration, shot record, health
-guarantee and a large puppy kit taped onto their carrier.
-
-Both airlines ship using same-day shipping that is safe and secure for the puppies. Both airlines offer priority shipping. If the puppies do travel in the cargo area, however, it is pressurized and at the same temperature and has the same air filtered in as the passengers breathe. Having shipped puppies for over 10 years, we have never had a negative incident.
-
-When sent priority, your puppy doesn't have as much "sitting around" time while waiting for processing. They are guaranteed to be taken immediately off the plane with no long holding periods before, during or after the flight. They are hand delivered to each counter. We do not sedate the puppies before travel as it is not recommended by our veterinarian.
-
-Most families report that the puppy was made available to them between 15 to 30 minutes from the time the plane arrived.
-When your puppy arrives, he/she may be picked up in the cargo pickup area or behind the counter of the ticket desk. The airlines does require some form of identification before they will release the puppy to the new owner. After you pick up your puppy and have returned home, we would ask that you call us to let us know how the puppy is doing.
-
-All puppies must be a minimum of 8 weeks old before they travel to their new home, even if you pick the puppy up in person.
-It must be at least 20 degrees above (F) but not hotter than 85 degrees at any point in their trip to their new home. Snub nose puppies cannot fly above 75 degrees.
-
-We make all the shipping arrangements. We search for the shortest available flight. We try to make the arrangements 2 weeks in advance, if possible. We will email the flight arrival information (airline, day of shipment, flight number, air bill number and time of arrival) as soon as they have been confirmed to us by the airline, along with the cost of shipping so you can send payment for shipping when you send the balance due on your puppy. Flight time and numbers are subject to change without notice. If they do, we will call you immediately after the puppy has been put on the flight with the changes and all information you will need to pick up your puppy.
-
-Puppies shipped through airlines are guaranteed by the airline with an additional $10 charge, which is minimal. We
-suggest insuring your puppy for the value of the puppy. If you want insurance on your puppy, let us know as that has to be done before the puppy is placed on the airplane.
-
-The cost of the trip varies with areas and airlines. The normal fee is around $289.00 to $350.00 (depending on weight, size
-of cage, and airline).
-
-Included with shipment of each puppy is its certified health certificate, vaccination and worming record, registration, puppy food, chew toy, 1 year Health Guarantee, and Pet carrier with food and water dish. (Pet Carrier is only included when shipping by air)
-
-
--->

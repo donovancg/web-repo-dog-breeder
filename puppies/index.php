@@ -6,6 +6,9 @@
 $query_puppies = "SELECT * FROM puppies";
 $result_puppies = mysqli_query($connect, $query_puppies);
 
+$query_puppies_rows = "SELECT COUNT(id) as total FROM puppies";
+$result_puppies_rows = mysqli_query($connect, $query_puppies_rows);
+
 $query_img = "SELECT * FROM puppyimg";
 $result_img = mysqli_query($connect, $query_img);
 
@@ -40,7 +43,7 @@ while($row2 = mysqli_fetch_assoc($result_img)) {
                 
                 while($row = mysqli_fetch_assoc($result_puppies)) {
                     $name = $row['name'];
-                    $id = $row['id'];
+                    $id = (int)$row['id'];
                     $price = $row['price'];
                     $description = $row['description'];
                     $status = $row['status'];
@@ -49,6 +52,16 @@ while($row2 = mysqli_fetch_assoc($result_img)) {
                     $breed = $row['breed'];
                     $images = $row['images'];
                     $video = $row['video'];
+
+                    $query_img = "SELECT img FROM puppyimg WHERE puppy_id='$id'";
+                    $result_img = mysqli_query($connect, $query_img);
+
+                    $img_array = array();
+
+                    while($row_img = mysqli_fetch_assoc($result_img)) {
+                        array_push($img_array, $row_img['img']);
+                    }
+                                        
                 ?>
                     <div class="puppy">
                         <?php if($status == "sold") {
@@ -59,9 +72,9 @@ while($row2 = mysqli_fetch_assoc($result_img)) {
                             echo "<img src=\"../img/reserved.png\" alt=\"Reserved\" class=\"puppy__sold\">";
                         }
                         ?>
-                        <img src="../img/puppies/<?php echo $images; ?>" alt="Puppy" class="puppy__img">
+                        <img src="../img/puppies/<?php echo $img_array[0]; ?>" alt="Puppy" class="puppy__img">
                         <p class="puppy__name"><?php echo $name;?> &ndash; <?php echo $breed;?> <?php echo $gender;?></p>
-                        <p class="puppy__price"><?php echo $price;?></p>
+                        <p class="puppy__price">$<?php echo $price;?></p>
                         <a href="../single?id=<?php echo $id;?>" class="puppy__cta">View Details</a>
                     </div>
                 <?php } ?>

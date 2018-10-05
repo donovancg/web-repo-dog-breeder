@@ -1,16 +1,17 @@
-var container = document.querySelector('.banner');
+var container = document.getElementById("js--banner");
+
+container.style.backgroundImage = 'linear-gradient(to right, #76B29B 0%, transparent 5%, transparent 32rem, #76B29B 37rem, #76B29B 100%), url("img/slide/slide_01.jpg")';
 
 var i = 1;
 
 setInterval(function() {
-    if(i < 7) {
+    if(i < 6) {
         i++;
     } else {
         i = 1;
     }
-    console.log(container.style.backgroundImage);
-    container.style.backgroundImage = "linear-gradient(to right, $color-banner 0%, transparent 5%, transparent 35rem, $color-banner 45rem, $color-banner 100%), url(\"../img/slide/slide_0" + i + ".jpg\");";
-    console.log(i);
+    
+    container.style.backgroundImage = 'linear-gradient(to right, #76B29B 0%, transparent 5%, transparent 32rem, #76B29B 37rem, #76B29B 100%), url("img/slide/slide_0' + i + '.jpg")';
 }, 5000);
 
 /*

@@ -10,6 +10,11 @@ $color-secondary: #FFB12E;
 $color-secondary-light: lighten($color-secondary, 15%);
 $color-secondary-dark: darken($color-secondary, 15%);
 
+// Tertiary
+$color-tertiary: #76B29B;
+$color-tertiary-light: lighten($color-tertiary, 15%);
+$color-tertiary-dark: darken($color-tertiary, 15%);
+
 // Social
 $color-facebook: #3b5998;
 $color-instagram: #517fa4;
@@ -22,6 +27,7 @@ $color-twitter: #55acee;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 $color-grey-light-3: #bbb;
+$color-grey-light-4: #fefefe;
 
 // Grey Dark
 $color-grey-dark: #777;
@@ -35,7 +41,8 @@ $color-white: #fff;
 $color-black: #000;
 
 // Element Specific
-$color-banner: #502d2d;
+$color-banner: $color-tertiary;
+// $color-banner: #502d2d;
 
 // Blue
 $color-blue-dark-1: #28355C;
@@ -47,7 +54,7 @@ $color-red-bright: #f00;
 
 // Grid
 $grid-width: 114rem;
-$gutter-vertical: 8rem;
+$gutter-vertical: 4rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
 
@@ -60,3 +67,15 @@ $default-line-height: 145%;
 
 // RWD
 $root-font-size: 62.5%;
+
+@include respond(tab-land) {
+    $root-font-size: 60%;
+}
+
+@include respond(tab-port) {
+    font-size: 57%;
+}
+
+@include respond(phone) {
+    font-size: 50%;
+}

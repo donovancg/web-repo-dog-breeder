@@ -1,0 +1,80 @@
+.about-home {
+    width: 80%;
+    margin: auto;
+    display: flex;
+
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    &__img {
+        width: 100%;
+        min-width: 40rem;
+
+        @include respond(tab-port) {
+            min-width: initial;
+            margin: auto;
+            display: inline-block;
+        }
+
+        @include respond(tab-land) {
+            min-width: 25rem;
+        }
+
+        @include respond(phone-small) {
+            min-width: initial;
+        }
+    }
+
+    &__p {
+        font-size: 1.7rem;
+        line-height: 170%;
+        text-align: justify;
+        margin-top: 1rem;
+        width: 100%;
+
+        @include respond(tab-port) {
+            
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-secondary;
+        padding: 1rem 4rem;
+        display: inline-block;
+        border-radius: 5rem;
+        margin-top: 2rem;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-secondary-dark;
+        }
+    }
+
+    &__col {
+        margin: 0 2rem;
+
+        @include respond(tab-port) {
+            margin: auto;
+        }
+
+        &--img {
+            width: 40%;
+
+            @include respond(tab-port) {
+                width: 70%;
+            }
+
+            @include respond(phone) {
+                width: 85%;
+            }
+        }
+
+        &--content {
+            
+        }
+    }
+}

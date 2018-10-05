@@ -21,9 +21,10 @@ $result_about_breed = mysqli_query($connect, $query_about_breed);
     <main>
         <section class="section-about">
             <h2 class="heading-secondary">About</h2>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="about">
+            <div class="about">
+                <div class="about__row">
+                    <div class="about__col">
+                        <img src="../img/slide/slide_011.jpg" alt="Image" class="about__img">
                         <?php
                         while($row_about_me = mysqli_fetch_assoc($result_about_me)) {
                         ?>
@@ -31,9 +32,8 @@ $result_about_breed = mysqli_query($connect, $query_about_breed);
                         <blockquote class="about__quote"><?php echo $row_about_me['content']; ?></blockquote>
                         <?php } ?>
                     </div>
-                </div>
-                <div class="col-1-of-2">
-                    <div class="about">
+                    <div class="about__col">
+                        <img src="../img/puppies/IMG_9848.jpg" alt="Image" class="about__img">
                         <?php
                         while($row_about_breed = mysqli_fetch_assoc($result_about_breed)) {
                         ?>

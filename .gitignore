@@ -1,4 +1,6 @@
 *.json
+*.sql
+server.txt
 node_modules/
 img/resources/
 DELETE_land/

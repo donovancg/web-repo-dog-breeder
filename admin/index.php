@@ -65,7 +65,19 @@ $result_content = mysqli_query($connect, $query_content);
                 while($row_puppies = mysqli_fetch_assoc($result_puppies)) {
                 ?>
                 <div class="puppies__puppy">
-                    <img src="../img/puppies/<?php echo $row_puppies['images']; ?>" alt="Buddy" class="puppies__img">
+                
+                    <?php
+                    $id = $row_puppies['id'];
+                    $query_img = "SELECT img FROM puppyimg WHERE puppy_id='$id'";
+                    $result_img = mysqli_query($connect, $query_img);
+
+                    $img_array = array();
+
+                    while($row_img = mysqli_fetch_assoc($result_img)) {
+                        array_push($img_array, $row_img['img']);
+                    }
+                    ?>
+                    <img src="../img/puppies/<?php echo $img_array[0]; ?>" alt="Image" class="puppies__img">
                     <h3 class="puppies__heading"><?php echo $row_puppies['name']; ?></h3>
                     <a href="puppy.php?p=<?php echo $row_puppies['id']; ?>" class="puppies__edit">Edit</a>
                 </div>

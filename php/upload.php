@@ -21,7 +21,7 @@ for( $i=0 ; $i < $total ; $i++ ) {
 
     $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
 
-    if ($tmpFilePath != ""){
+    // if ($tmpFilePath != ""){
         $file_name = $_FILES['fileToUpload']['name'][$i];
         $newFilePath = "../img/puppies/" . $file_name;
 
@@ -37,11 +37,10 @@ for( $i=0 ; $i < $total ; $i++ ) {
             echo $extention;
             echo "<a href=\"../admin/puppyimg.php?i=" . $_POST['id'] . "\">Back</a>";
             rename($newFilePath, "../img/puppies/" . $new_name);
+        } else {
+            echo "File name invalid.<br>";
+            echo "<a href=\"../admin/puppyimg.php?i=" . $_POST['id'] . "\">Back</a>";
         }
-    } else {
-        echo "File name invalid.<br>";
-        echo "<a href=\"../admin/puppyimg.php?i=" . $_POST['id'] . "\">Back</a>";
-    }
 }
 
 ?>

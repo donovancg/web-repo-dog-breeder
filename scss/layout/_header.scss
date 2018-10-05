@@ -155,6 +155,10 @@
         }
     }
 
+    &__sticky-respond {
+        height: 6rem;
+    }
+
 
     &__heading {
 
@@ -169,8 +173,9 @@
     }
 
     &__img {
-        height: 10rem;
+        height: 12rem;
         margin-right: auto;
+        margin-left: 2rem;
 
         @include respond(phone) {
             margin-right: 0;

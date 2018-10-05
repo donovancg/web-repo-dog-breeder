@@ -1,32 +1,6 @@
 .section-about {
     margin-bottom: 5rem;
     margin-top: 2rem;
-
-    & .about {
-        // width: 70%;
-        margin: auto;
-        text-align: center;
-        
-
-        &__quote {
-            font-style: italic;
-            text-align: justify;
-            width: 70%;
-
-            &::before {
-                content: "\201C";
-                font-size: 4rem;
-            }
-        }
-
-        &__info {
-            text-align: justify;
-        }
-
-        &__caption {
-            text-align: center;
-        }
-    }
 }
 
 .section-info {
