@@ -78,8 +78,8 @@
 
 .nav {
     overflow: hidden;
-    background-image: linear-gradient(to right, $color-white 0%, $color-primary 50%, $color-primary 100%);
-    background-color: $color-white;
+    background-image: linear-gradient(to right, $color-white 0%, transparent 50%, transparent 100%);
+    background-color: $color-primary;
     padding: 1.2rem 0;
     display: flex;
     justify-content: flex-end;
