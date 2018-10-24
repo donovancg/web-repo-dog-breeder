@@ -17,7 +17,20 @@
     }
 
     &__img {
-        width: 80%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--container {
+            width: 100%;
+            padding-top: 120%;
+            height: 0;
+            position: relative;
+            margin: auto;
+        }
     }
 
     &__link {

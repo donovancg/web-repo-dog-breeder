@@ -2,6 +2,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="description" content="Savannah May Puppies is a professional Yorkiepoo breeder from Woodland, Washington.">
+<meta name="description" content="My yorkipoos puppies are always playful and love spending time with people, making them great pets for families and especially children. They are very snugly and are the happiest sitting on your lap or lying right next to you. I form very trainable, eager to learn puppies that love to please. With the right training in place just weeks old, they will be going potty in a designated area. This is due to me following the system called the 'Misty Method' I also incorporate the Bio Sensory Techniques also known as 'The Super Dog Program'. My puppies are raised in the house, played with multiple times a day, are able to be groomed, nails clipped, not scared of loud noises (i.e.,vacuums or doorbells, etc) and are all started with basic obedience.">
+<meta name"keywords" content="Puppy, Puppy breeders, hobby breeder, yorkiepoo, yorkiepoo puppies, yorkiepoo breeder, contact, about, delivery, purchase, health, guarantee, precious puppies, precious">
 <link rel="icon" href="../img/favicon.png" type="image/png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">

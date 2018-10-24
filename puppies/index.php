@@ -72,7 +72,9 @@ while($row2 = mysqli_fetch_assoc($result_img)) {
                             echo "<img src=\"../img/reserved.png\" alt=\"Reserved\" class=\"puppy__sold\">";
                         }
                         ?>
-                        <img src="../img/puppies/<?php echo $img_array[0]; ?>" alt="Puppy" class="puppy__img">
+                        <div class="puppy__img--container">
+                            <img src="../img/puppies/<?php echo $img_array[0]; ?>" alt="Puppy" class="puppy__img">
+                        </div>
                         <p class="puppy__name"><?php echo $name;?> &ndash; <?php echo $breed;?> <?php echo $gender;?></p>
                         <p class="puppy__price">$<?php echo $price;?></p>
                         <a href="../single?id=<?php echo $id;?>" class="puppy__cta">View Details</a>

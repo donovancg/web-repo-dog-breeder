@@ -64,42 +64,48 @@ while($row2 = mysqli_fetch_assoc($result__img)) {
                         <p class="puppy-main__price">$<?php echo $price; ?></p>
                         <a href="../contact/" class="puppy-main__cta">Contact Seller</a>
                     </div>
+                </div>
+                <div class="puppy-main__line">
                     <div class="puppy-main__about">
                         <h3 class="heading-tertiary">About <?php echo $name; ?></h3>
-                        <p class="puppy-main__quote">&nbsp;&nbsp;&nbsp;&nbsp;"<?php echo $description; ?>"</p>
+                        <p class="puppy-main__quote">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $description; ?></p>
+                    </div>
+                    <div class="puppy-main__info">
+                        <table class="puppy-main__table">
+                            <tr class="puppy-main__tr">
+                                <td class="puppy-main__td">Birthdate: </td>
+                                <td class="puppy-main__td"><?php echo $birthdate; ?></td>
+                            </tr>
+                            <tr class="puppy-main__tr">
+                                <td class="puppy-main__td">Breed: </td>
+                                <td class="puppy-main__td"><?php echo $breed; ?></td>
+                            </tr>
+                            <tr class="puppy-main__tr">
+                                <td class="puppy-main__td">Gender: </td>
+                                <td class="puppy-main__td"><?php echo $gender; ?></td>
+                            </tr>
+                            <tr class="puppy-main__tr">
+                                <td class="puppy-main__td">Availability: </td>
+                                <td class="puppy-main__td"><?php if($status == "Available") {
+                                    echo "Available";
+                                } else if ($status == "Reserved"){
+                                    echo "Reserved";
+                                } else {
+                                    echo "Sold";
+                                } ?></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                <div class="puppy-main__info">
-                    <table class="puppy-main__table">
-                        <tr class="puppy-main__tr">
-                            <td class="puppy-main__td">Birthdate: </td>
-                            <td class="puppy-main__td"><?php echo $birthdate; ?></td>
-                        </tr>
-                        <tr class="puppy-main__tr">
-                            <td class="puppy-main__td">Breed: </td>
-                            <td class="puppy-main__td"><?php echo $breed; ?></td>
-                        </tr>
-                        <tr class="puppy-main__tr">
-                            <td class="puppy-main__td">Gender: </td>
-                            <td class="puppy-main__td"><?php echo $gender; ?></td>
-                        </tr>
-                        <tr class="puppy-main__tr">
-                            <td class="puppy-main__td">Availability: </td>
-                            <td class="puppy-main__td"><?php if($status == "Available") {
-                                echo "Available";
-                            } else if ($status == "Reserved"){
-                                echo "Reserved";
-                            } else {
-                                echo "Sold";
-                            } ?></td>
-                        </tr>
-                    </table>
-                </div>
+
+                
+                <?php if($video !== "") { ?>
                 <div class="section-divide"></div>
                 <div class="puppy-main__video">
                     <h3 class="heading-tertiary">Watch <?php echo $name; ?> in Action</h3>
                     <iframe class="puppy-main__vid" src="<?php echo $video; ?>"></iframe>
                 </div>
+                <?php } ?>
             </div>
         </section>
     </main>
@@ -110,3 +116,5 @@ while($row2 = mysqli_fetch_assoc($result__img)) {
     <script src="../js/script.js"></script>
 </body>
 </html>
+
+<!-- 2IuKjIYy6Ig -->

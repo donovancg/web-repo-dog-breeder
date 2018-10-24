@@ -315,6 +315,37 @@ input, textarea {
   .four-o-four__link:hover {
     background-color: #e18d00; }
 
+.family {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  width: 90%;
+  margin: auto;
+  grid-gap: 4rem;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .family {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem; } }
+  .family__item {
+    text-align: center; }
+  .family__img {
+    height: 30rem;
+    margin: 1rem 0; }
+    @media only screen and (max-width: 56.25em) {
+      .family__img {
+        height: 25rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .family__img {
+        height: auto;
+        width: 80%; } }
+  @media only screen and (max-width: 56.25em) {
+    .family__description {
+      text-align: left; } }
+  @media only screen and (max-width: 37.5em) {
+    .family__description {
+      font-size: 1.4rem; } }
+
 .featured {
   display: flex;
   flex-wrap: wrap;
@@ -329,7 +360,18 @@ input, textarea {
   .featured__heading {
     margin-bottom: 1rem; }
   .featured__img {
-    width: 80%; }
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .featured__img--container {
+      width: 100%;
+      padding-top: 120%;
+      height: 0;
+      position: relative;
+      margin: auto; }
   .featured__link {
     margin: .5rem;
     padding: 1rem 4rem;
@@ -561,9 +603,22 @@ input, textarea {
   background-color: #f7f7f7;
   text-align: center;
   padding: 2rem;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
   .puppy__img {
-    width: 100%; }
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .puppy__img--container {
+      width: 100%;
+      padding-top: 120%;
+      height: 0;
+      position: relative; }
   .puppy__empty {
     text-align: center; }
   .puppy__name {
@@ -601,6 +656,16 @@ input, textarea {
       .puppy-main__img {
         width: 90%;
         height: auto; } }
+  .puppy-main__line {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .puppy-main__about {
+    display: inline-block;
+    width: 70%; }
+  .puppy-main__info {
+    display: inline-block;
+    margin: 0; }
   .puppy-main__select {
     height: 5rem;
     cursor: pointer; }
@@ -876,7 +941,7 @@ input, textarea {
 */
 .nav {
   overflow: hidden;
-  background-image: linear-gradient(to right, transparent 0%, #ffe2dc 50%, #ffe2dc 100%);
+  background-image: linear-gradient(to right, #fff 0%, #ffe2dc 50%, #ffe2dc 100%);
   background-color: #fff;
   padding: 1.2rem 0;
   display: flex;

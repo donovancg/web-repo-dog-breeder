@@ -125,9 +125,11 @@ $result_puppies_featured = mysqli_query($connect, $query_puppies_featured);
                 ?>
                 <div class="featured__puppy">
                     <h3 class="featured__heading"><?php echo $row_puppies_featured['name']; ?></h3>
-                    <img src="img/puppies/<?php echo $img_array[0]; ?>" alt="<?php echo $row_puppies_featured['name']; ?> - <?php echo $row_puppies_featured['breed']; ?> <?php echo $row_puppies_featured['gender']; ?>" class="featured__img">
+                    <div class="featured__img--container">
+                        <img src="img/puppies/<?php echo $img_array[0]; ?>" alt="<?php echo $row_puppies_featured['name']; ?> - <?php echo $row_puppies_featured['breed']; ?> <?php echo $row_puppies_featured['gender']; ?>" class="featured__img">
+                    </div>
                     <div class="featured__info">
-                        <p class="featured__item"><?php echo $row_puppies_featured['price']; ?></p>
+                        <p class="featured__item">$<?php echo $row_puppies_featured['price']; ?></p>
                         <p class="featured__item"><?php echo $row_puppies_featured['gender']; ?></p>
                         <p class="featured__item"><?php echo $row_puppies_featured['breed']; ?></p>
                     </div>

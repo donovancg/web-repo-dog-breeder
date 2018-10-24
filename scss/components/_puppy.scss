@@ -3,9 +3,24 @@
     text-align: center;
     padding: 2rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
     &__img {
         width: 100%;
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--container {
+            width: 100%;
+            padding-top: 120%;
+            height: 0;
+            position: relative;
+        }
     }
 
     &__empty {
