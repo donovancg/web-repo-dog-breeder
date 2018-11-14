@@ -39,6 +39,9 @@ Base > typography > general layout > grid > page layout > components
 img {
   user-select: none; }
 
+iframe {
+  border: none; }
+
 html {
   font-size: 62.5%; }
 
@@ -75,7 +78,7 @@ body {
   color: #000;
   background-color: #ffe2dc; }
 
-input, textarea {
+input, textarea, button {
   font-family: "Merriweather";
   font-size: 1.6rem; }
 
@@ -119,14 +122,14 @@ input, textarea {
   .about-home__link {
     text-decoration: none;
     color: #fff;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     padding: 1rem 4rem;
     display: inline-block;
     border-radius: 5rem;
     margin-top: 2rem;
     transition: all .2s; }
     .about-home__link:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
   .about-home__col {
     margin: 0 2rem; }
     @media only screen and (max-width: 56.25em) {
@@ -198,6 +201,147 @@ input, textarea {
 .banner__img {
   width: 100%; }
 
+.blog {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto; }
+  .blog__posts {
+    grid-column: 1 / 9; }
+  .blog__sidebar {
+    grid-column: 9 / -1; }
+  .blog__pagination {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: "Lato";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #76B29B;
+    grid-column: 1 / -1; }
+    .blog__pagination--icon {
+      font-size: 1.4rem; }
+    .blog__pagination--pages {
+      margin: 0 1rem; }
+      .blog__pagination--pages:not(.blog__pagination--pages--more) {
+        cursor: pointer; }
+
+.post {
+  background-color: #f7f7f7;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem; }
+  .post__img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    object-fit: cover;
+    transform: translateY(-50%); }
+    .post__img--container {
+      width: 25%;
+      flex-grow: 1;
+      padding-top: 25%;
+      position: relative;
+      height: 0;
+      margin: auto; }
+  .post__content {
+    width: 67%;
+    flex-grow: 2;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column; }
+  .post__heading {
+    margin-bottom: 2rem;
+    font-size: 2rem; }
+  .post__text {
+    color: #777; }
+  .post__link {
+    background-color: #76B29B;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    flex-grow: 0;
+    transition: background-color .2s; }
+    .post__link:hover {
+      background-color: #4f8d75; }
+    .post__link--read {
+      padding: 1rem 4rem;
+      margin: 2rem 0;
+      align-self: flex-start; }
+    .post__link--share {
+      padding: .5rem 2rem; }
+  .post__bar {
+    display: flex;
+    align-items: center;
+    margin-top: auto; }
+  .post__detail {
+    margin-right: 4rem;
+    font-size: 1.4rem;
+    color: #76B29B; }
+  .post__label {
+    margin-left: 1rem; }
+
+.sidebar {
+  padding: 2rem; }
+  .sidebar__img {
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    margin-right: 2rem; }
+  .sidebar__post {
+    background-color: #f7f7f7;
+    margin: 2rem 0;
+    padding: 1rem;
+    display: flex; }
+  .sidebar__link {
+    padding: .5rem 2rem;
+    background-color: #76B29B;
+    border-radius: 5rem;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 1rem 0;
+    transition: background-color .2s; }
+    .sidebar__link:hover {
+      background-color: #4f8d75; }
+  .sidebar__heading {
+    font-weight: 700;
+    font-size: 1.8rem; }
+  .sidebar__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+
+.search__form {
+  display: flex; }
+
+.search__input {
+  padding: 1rem;
+  flex-grow: 1; }
+  .search__input:focus {
+    outline: none; }
+    .search__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+
+.search__submit {
+  padding: 1rem;
+  border-color: transparent;
+  background-color: #76B29B;
+  color: #fff;
+  flex-grow: 0;
+  transition: background-color .2s; }
+  .search__submit:hover {
+    background-color: #4f8d75; }
+  .search__submit:focus {
+    outline: none; }
+
 .contact-home {
   width: 70%;
   margin: auto;
@@ -262,14 +406,14 @@ input, textarea {
   .contact-home__submit {
     margin-top: 2rem;
     padding: 1rem 4rem;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     border: none;
     border-radius: 5rem;
     color: #fff;
     cursor: pointer;
     transition: all .2s; }
     .contact-home__submit:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
     .contact-home__submit:focus {
       outline: none; }
 
@@ -307,13 +451,13 @@ input, textarea {
 .four-o-four__link {
   text-decoration: none;
   color: #fff;
-  background-color: #FFB12E;
+  background-color: #76B29B;
   padding: 1rem 2rem;
   transition: all .2s;
   display: inline-block;
   margin-bottom: 2rem; }
   .four-o-four__link:hover {
-    background-color: #e18d00; }
+    background-color: #4f8d75; }
 
 .family {
   display: grid;
@@ -376,13 +520,13 @@ input, textarea {
     margin: .5rem;
     padding: 1rem 4rem;
     border-radius: 5rem;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     color: #fff;
     display: inline-block;
     text-decoration: none;
     transition: all .2s; }
     .featured__link:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
 
 .form {
   width: 50%;
@@ -434,9 +578,9 @@ input, textarea {
   .form__submit {
     margin-bottom: 2rem;
     padding: 1rem 2rem;
-    border: 2px solid #FFB12E;
-    border-radius: 5px;
-    background-color: #FFB12E;
+    border: 2px solid #76B29B;
+    border-radius: 5rem;
+    background-color: #76B29B;
     color: #fff;
     transition: all .2s;
     display: inline-block;
@@ -446,8 +590,8 @@ input, textarea {
       width: 100%;
       text-align: center; }
     .form__submit:hover {
-      background-color: #e18d00;
-      border: 2px solid #e18d00;
+      background-color: #4f8d75;
+      border: 2px solid #4f8d75;
       color: #fff; }
     .form__submit:focus {
       outline: none; }
@@ -574,13 +718,13 @@ input, textarea {
     margin: .3rem;
     text-decoration: none;
     color: #fff;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     padding: 1rem 4rem;
     border-radius: 5rem;
     display: inline-block;
     transition: all .2s; }
     .popup__cta:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
   .popup__img {
     width: 30vw;
     margin-top: 3rem; }
@@ -613,7 +757,8 @@ input, textarea {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: 7000; }
     .puppy__img--container {
       width: 100%;
       padding-top: 120%;
@@ -628,16 +773,17 @@ input, textarea {
   .puppy__cta {
     text-decoration: none;
     color: #fff;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     padding: 1rem 4rem;
     border-radius: 5rem;
     display: inline-block;
     transition: all .2s; }
     .puppy__cta:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
   .puppy__sold {
     position: absolute;
-    width: 60%; }
+    width: 60%;
+    z-index: 8000; }
 
 .puppy-main {
   width: 70%;
@@ -673,13 +819,13 @@ input, textarea {
     text-decoration: none;
     color: #fff;
     padding: 1rem 2rem;
-    background-color: #FFB12E;
+    background-color: #76B29B;
     display: inline-block;
     margin: 1rem;
     transition: all .2s;
     margin-bottom: 1.5rem; }
     .puppy-main__cta:hover {
-      background-color: #e18d00; }
+      background-color: #4f8d75; }
   .puppy-main__quote {
     text-align: justify;
     margin-top: 1rem; }
@@ -947,8 +1093,7 @@ input, textarea {
   display: flex;
   justify-content: flex-end;
   height: 6rem;
-  align-content: center;
-  transition: all .2s; }
+  align-content: center; }
   @media only screen and (max-width: 37.5em) {
     .nav {
       background-image: none;
@@ -957,7 +1102,9 @@ input, textarea {
     position: relative;
     display: block;
     height: auto;
-    background-color: #ffe2dc; }
+    background-color: #ffe2dc;
+    background-image: none;
+    transition: background-color 5s; }
     .nav.responsive .nav__link {
       float: none;
       display: block;

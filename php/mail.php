@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
     // $content = wordwrap($content,70);
 
     // send email
-    // mail("donovancgillies@gmail.com", $name . " has sent you an email from Savannah May Puppies", $content, "From: donovancgillies@gmail.com");
+    mail("donovancgillies@gmail.com", $name . " has sent you an email from Savannah May Puppies", $content, "From: donovancgillies@gmail.com");
     header("Location: ../contact/?s=1");
 }
 

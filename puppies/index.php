@@ -71,7 +71,9 @@ while($row2 = mysqli_fetch_assoc($result_img)) {
                         } else if($status == "reserved") {
                             echo "<img src=\"../img/reserved.png\" alt=\"Reserved\" class=\"puppy__sold\">";
                         }
+                        
                         ?>
+                        <img src="../img/reserved.png" alt="Reserved" class="puppy__sold">
                         <div class="puppy__img--container">
                             <img src="../img/puppies/<?php echo $img_array[0]; ?>" alt="Puppy" class="puppy__img">
                         </div>

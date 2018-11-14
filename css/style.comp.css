@@ -613,7 +613,8 @@ input, textarea {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: 7000; }
     .puppy__img--container {
       width: 100%;
       padding-top: 120%;
@@ -637,7 +638,8 @@ input, textarea {
       background-color: #e18d00; }
   .puppy__sold {
     position: absolute;
-    width: 60%; }
+    width: 60%;
+    z-index: 8000; }
 
 .puppy-main {
   width: 70%;
@@ -941,14 +943,14 @@ input, textarea {
 */
 .nav {
   overflow: hidden;
-  background-image: linear-gradient(to right, #fff 0%, #ffe2dc 50%, #ffe2dc 100%);
-  background-color: #fff;
+  background-image: linear-gradient(to right, #fff 0%, transparent 50%, transparent 100%);
+  background-color: #ffe2dc;
   padding: 1.2rem 0;
   display: flex;
   justify-content: flex-end;
   height: 6rem;
   align-content: center;
-  transition: all .2s; }
+  transition: background-color 5s; }
   @media only screen and (max-width: 37.5em) {
     .nav {
       background-image: none;
@@ -957,7 +959,9 @@ input, textarea {
     position: relative;
     display: block;
     height: auto;
-    background-color: #ffe2dc; }
+    background-color: #ffe2dc;
+    background-image: none;
+    transition: background-color 5s; }
     .nav.responsive .nav__link {
       float: none;
       display: block;

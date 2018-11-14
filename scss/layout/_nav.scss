@@ -85,7 +85,6 @@
     justify-content: flex-end;
     height: 6rem;
     align-content: center;
-    transition: all .2s;
 
     @include respond(phone) {
         background-image: none;
@@ -98,6 +97,8 @@
         display: block;
         height: auto;
         background-color: $color-primary;
+        background-image: none;
+        transition: background-color 5s;
 
         & .nav__link {
             float: none;
